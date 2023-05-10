@@ -1,11 +1,8 @@
+import header from './js/header';
 import mobileMenu from './js/mobile-menu';
 import themeToggle from './js/themeToggle';
-import header from './js/header';
 import onSearchFormSubmit from './js/seachcatalog';
+// import weeklyTrends from './js/weekly-trends';
 import modalMovie from './js/modal_movie';
-import scrollUp from './js/scroll-up';
+
 import createWeekTrendsCatalog from './js/create-trends';
-// import './js/pagination';
-// import pagination from './js/pagination-catalog';
-import { getDayMovieTrend } from './js/hero-home';
-import modalTeam from './js/modal-team';
