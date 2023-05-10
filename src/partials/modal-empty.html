@@ -1,0 +1,44 @@
+<div class="modal-empty__backdrop modal-empty__backdrop--close">
+  <div class="modal-empty">
+    <p class="modal-empty__text">
+      OOPS...<br />
+      We are very sorry!<br />
+      But we couldn't find the trailer.
+    </p>
+    <div class="modal-empty__thumb">
+      <picture>
+        <source
+          srcset="
+            /src/images/modal-empty-des_x1.png 1x,
+            /src/images/modal-empty-des_x2.png 2x
+          "
+          media="(min-width:1280px)"
+        />
+        <source
+          srcset="
+            /src/images/modal-empty-tab_x1.png 1x,
+            /src/images/modal-empty-tab_x2.png 2x
+          "
+          media="(min-width:769px)"
+        />
+        <source
+          srcset="
+            /src/images/modal-empty-mob_x1.png 1x,
+            /src/images/modal-empty-mob_x2.png 2x
+          "
+          media="(max-width:768px)"
+        />
+        <img
+          class="products-list__photo"
+          src="/src/images/modal-empty-des_x1.png"
+          alt="banner with film attributes"
+        />
+      </picture>
+    </div>
+    <button class="modal-empty__close" type="button">
+      <svg>
+        <use href="./images/symbol-defs.svg#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+</div>
