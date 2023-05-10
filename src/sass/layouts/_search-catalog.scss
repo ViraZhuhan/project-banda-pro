@@ -55,7 +55,8 @@
 
     box-sizing: border-box;
 
-    border: 1px solid #FFFFFF;
+    border: 1px solid var(--color-border-primary);
+    border-color:  var(--color-border-primary);
     border-radius: 8px;
 
     order: 0;
@@ -63,7 +64,7 @@
 
     background-color: transparent;
     @include font-text ($fw: 500);
-    color: $color-text-secondary;
+    color: var(--color-text-neutral);
 }
 
 .search-button {
@@ -82,7 +83,7 @@
 }
 
 .no-results {
-    color: $color-text;
+    color:  var(--color-text-primary);
     text-align: center;
 
     @include font-text ($fs: 32, $lh: 1.12);
@@ -91,6 +92,7 @@
 .icon-search {
     width: 20px;
     height: 20px;
+    color: var(--color-text-primary);
 }
 
 
