@@ -6,9 +6,9 @@ export default function getRefs() {
     //   switcher: document.querySelector('.switch input[type="checkbox"]'),
 
     // render-cards
-    //   rating: document.querySelectorAll('.rating'),
-    //   gallery: document.querySelector('.gallery'),
-    //   galleryCatalog: document.querySelector('.gallery-catalog'),
+      rating: document.querySelectorAll('.rating'),
+      gallery: document.querySelector('.gallery'),
+      galleryCatalog: document.querySelector('.gallery-catalog'),
 
     // modal-team
     openModal: document.querySelector('.open-modal-team'),
