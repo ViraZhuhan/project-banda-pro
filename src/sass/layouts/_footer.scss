@@ -1,0 +1,77 @@
+// .footer {
+//     height: 108px;
+
+//     background-color: var(--bg-primary);
+
+//     @include tablet {
+//         height: 119px;
+//     }
+// }
+
+// .footer__wrap {
+//     display: flex;
+//     gap: 8px;
+//     flex-direction: column;
+//     flex-wrap: wrap;
+//     align-content: center;
+//     justify-content: center;
+//     padding-top: 40px;
+//     padding-bottom: 28px;
+
+//     @include tablet {
+//         flex-direction: row;
+//         flex-wrap: nowrap;
+//         gap: 5px;
+
+//         padding-top: 60px;
+//         padding-bottom: 40px;
+//     }
+
+//     @include desktop {
+//         padding-top: 60px;
+//         padding-bottom: 80px;
+//     }
+// }
+
+// .text,
+// .team {
+//     color: inherit;
+//     text-align: center;
+//     @include font-text ($fw: 400, $fs: 14, $lh: 1.14, $ls: 0.01);
+//     color: var(--color-text-neutral);
+
+//     @include tablet {
+//         @include font-text ();
+//     }
+// }
+
+// .team {
+//     color: inherit;
+//     text-decoration: underline;
+// }
+
+// .icon-heart {
+//     width: 14px;
+//     height: 12.88px;
+
+//     margin-left: 10px;
+//     margin-right: 10px;
+
+//     animation-name: changeSize;
+//     animation-duration: 1000ms;
+
+//     @keyframes changeSize {
+//         0% {
+//             scale: 1.5;
+//         }
+
+//         50% {
+//             scale: 1.0;
+//         }
+
+//         100% {
+//             scale: 1.5;
+//         }
+//     }
+// }
+    

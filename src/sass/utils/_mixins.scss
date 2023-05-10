@@ -1,0 +1,47 @@
+@mixin tel {
+    @media screen and (min-width: 480px) {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media screen and (min-width: 1280px) {
+      @content;
+    }
+  }
+  
+  @mixin retina {
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      @content;
+    }
+  }
+  
+  
+  @mixin font-primary($fw: 700, $fs: 64, $lh: 1.17, $ls: 0.03) {
+    font-weight: $fw;
+    font-size: $fs + px;
+    line-height: $lh;
+    letter-spacing: $ls + em;
+  }
+  
+  @mixin font-title ($fw: 500, $fs: 28, $lh: 1.17, $ls: 0.03) {
+    font-weight: $fw;
+    font-size: $fs + px;
+    line-height: $lh;
+    letter-spacing: $ls + em;
+  }
+  
+  @mixin font-text($fw: 400, $fs: 16, $lh: 1.19, $ls: 0.03) {
+    font-weight: $fw;
+    font-size: $fs + px;
+    line-height: $lh;
+    letter-spacing: $ls + em;
+  }

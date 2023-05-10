@@ -1,0 +1,18 @@
+// -- all --//
+@import './header';
+@import './footer';
+
+// --  home -- //
+@import './hero-home';
+@import './weekly-trends';
+@import './upcoming';
+
+// -- catalog --//
+@import './hero-home';
+@import './search-catalog';
+@import './card-catalog';
+@import './pagination-catalog';
+
+// -- library --//
+@import './hero-library';
+@import './card-library';
