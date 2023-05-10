@@ -32,7 +32,7 @@
 //       max-width: 846px;
 //       padding: 60px;
 //   }
-  
+
 //     &__img{
 //       margin: auto;
 //       border-radius: 5px;
@@ -40,7 +40,7 @@
 //           margin:0;
 //         }
 //     }
-  
+
 //     &__items{
 //       color: $color-text;
 //         @media screen and (min-width: $tablet) {
@@ -80,7 +80,7 @@
 //     &__rating{
 //       display: grid;
 //       grid-template: 1fr/1fr 1fr;
-  
+
 //       @include font-text;
 //       color: $color-neutral-light;
 //       padding-bottom: 12px;
@@ -103,7 +103,7 @@
 //           line-height: 1.14;
 //         }
 //     }
-  
+
 //     &__genre{
 //       display: grid;
 //         grid-template: 1fr/1fr 1fr;
@@ -118,7 +118,7 @@
 //             line-height: 1.19;
 //         }
 //     }
-  
+
 //       &__genre span {
 //         color: $color-primary-light;
 //   }
@@ -141,7 +141,7 @@
 //       padding-bottom: 24px;
 //     }
 //     }
-  
+
 //   }
 //   .button__close{
 //     position: absolute;
@@ -155,7 +155,7 @@
 //         top: 40;
 //         right: 40;
 //       }
-  
+
 //   }
 //   .button__close svg{
 //     fill:#fff;
@@ -163,7 +163,7 @@
 //     height: 24px;
 //   }
 //   .button-add{
-  
+
 //     padding: 12px 24px;
 //     border-radius: 74px;
 //     font-size: 12px;
@@ -172,15 +172,15 @@
 //     color: $color-text;
 //     border: 1px solid $color-text-focus;
 //   }
-  
+
 //   .button-add:hover{
 //     background-color: $color-text-primary;
 //     border: 1px solid $color-text-focus;
 //     color: $color-bg-header;;
-  
+
 //   }
 //   .button-remove {
-  
+
 //     padding: 12px 24px;
 //     border-radius: 74px;
 //     font-size: 12px;
@@ -189,14 +189,13 @@
 //     color: $color-text;
 //     border: 1px solid $color-text-focus;
 //   }
-  
+
 //   .button-remove:hover {
 //     background-color: $color-text-primary;
 //     border: 1px solid $color-text-focus;
 //     color: $color-bg-header;
 //     ;
-  
+
 //   }
-  
-  
-  
+
+
