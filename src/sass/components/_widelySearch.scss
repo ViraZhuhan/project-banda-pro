@@ -1,0 +1,236 @@
+.widelySearch {
+  position: relative;
+  // outline: 1px solid tomato;
+  display: flex;
+
+  justify-content: center;
+  width: 100%;
+  background-color: $color-primary-dark;
+  padding-top: 40px;
+  padding-bottom: 8px;
+
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 18px;
+  }
+  @include desktop {
+    padding-top: 80px;
+    padding-bottom: 24px;
+  }
+}
+
+.filmFormWide {
+  // outline: 1px solid tomato;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $color-primary-dark;
+  width: 280px;
+
+  @include tablet {
+    width: 704px;
+    height: 44px;
+  }
+  @include desktop {
+    width: 1083px;
+    height: 48px;
+  }
+
+  & div {
+    position: relative;
+    background-color: transparent;
+    outline: none;
+
+    &.before-submit {
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+  }
+
+  & input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid $color-primary-light;
+
+    @include font-text($fw: 500, $fs: 14, $lh: 1.42, $ls: 0.02);
+    color: $color-neutral-light;
+    background-color: transparent;
+    outline: none;
+
+    @include desktop {
+      @include font-text($fw: 500, $fs: 16, $lh: 1.19, $ls: 0.02);
+    }
+  }
+
+  & ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border: 1px solid $color-neutral-light;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: $color-primary-dark;
+
+    display: none;
+    &.isVisible {
+      display: block !important;
+    }
+  }
+  & li {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+
+    height: 40px;
+    color: $color-text-secondary;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top: 1px solid $color-neutral-light;
+    @include font-text($fw: 500, $fs: 14, $lh: 1.42, $ls: 0.02);
+
+    @include desktop {
+      @include font-text($fw: 500, $fs: 16, $lh: 1.19, $ls: 0.02);
+    }
+  }
+  & li:hover {
+    color: $color-text-focus;
+    @include font-text($fw: 500, $fs: 16, $lh: 1.5, $ls: 0.02);
+    @include desktop {
+      @include font-text($fw: 500, $fs: 18, $lh: 1.5, $ls: 0.02);
+    }
+  }
+  &.before-submit {
+    @include tablet {
+      width: 264px;
+    }
+    @include desktop {
+      width: 398px;
+    }
+  }
+}
+
+.filmFormWide__film-div {
+  width: 190px;
+  height: 40px;
+  margin: 0 0 12px 0;
+
+  @include tablet {
+    width: 188px;
+    height: 44px;
+    margin: 0 12px 0 0;
+  }
+  @include desktop {
+    width: 315px;
+    height: 48px;
+    margin: 0 20px 0 0;
+  }
+
+  &.before-submit {
+    width: 224;
+
+    @include tablet {
+      width: 204px;
+    }
+    @include desktop {
+      width: 334px;
+    }
+  }
+}
+
+.filmFormWide__year-div {
+  width: 95px;
+  height: 40px;
+  margin: 0;
+
+  @include tablet {
+    width: 95px;
+    height: 44px;
+    margin: 0 12px 0 0;
+  }
+  @include desktop {
+    width: 95px;
+    height: 48px;
+    margin: 0 20px 0 0;
+  }
+}
+
+.filmFormWide__genre-div {
+  width: 173px;
+  height: 40px;
+  margin: 0;
+  margin-left: auto;
+  margin-bottom: 12px;
+
+  @include tablet {
+    width: 144px;
+    height: 44px;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
+  @include desktop {
+    width: 260px;
+    height: 48px;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+
+.filmFormWide__country-div {
+  width: 220px;
+  height: 40px;
+  margin: 0;
+  margin-left: 0;
+  margin-bottom: 0px;
+
+  @include tablet {
+    width: 181px;
+    height: 44px;
+  }
+  @include desktop {
+    width: 281px;
+    height: 48px;
+  }
+}
+
+.filmFormWide__btn {
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+
+  &:active {
+    background: linear-gradient(141.22deg, #f84119 9.4%, #ffc226 91.91%);
+  }
+
+  & svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  @include tablet {
+    width: 44px;
+    height: 44px;
+  }
+  @include desktop {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.visual-off {
+  width: 0;
+  display: none;
+}
+
+.filmFormWide__film-label {
+  display: none;
+}
