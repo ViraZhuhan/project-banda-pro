@@ -44,7 +44,7 @@ export default function getRefs() {
 
     // scroll-up
     // Get the button element
-    //   scrollUpBtn: document.getElementById('scroll-up-btn'),
+    scrollUpBtn: document.getElementById('scroll-up-btn'),
 
     //   rating: document.querySelector('.rating'),
 
