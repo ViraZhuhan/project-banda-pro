@@ -11,17 +11,17 @@ export default function getRefs() {
     //   galleryCatalog: document.querySelector('.gallery-catalog'),
      
   
-      // header
-    //   pageLinks: document.querySelectorAll('.navigation__link'),
-    //   pageLinksMobile: document.querySelectorAll('.navigation-menu__link'),
+     /*  header */
+      pageLinks: document.querySelectorAll('.navigation__link'),
+      pageLinksMobile: document.querySelectorAll('.navigation-menu__link'),
   
-      // mobil-menu
-    //   mobileMenu: document.querySelector('.mobile-menu'),
-    //   headerContainer: document.querySelector('.header-menu'),
-    //   openMenuBtn: document.querySelector('.menu-open'),
-    //   body: document.getElementsByTagName('body')[0],
-    //   linkButton: document.querySelectorAll('.navigation-menu__link'),
-    //   backdrop: document.querySelector('.backdrop'),
+      /* mobil-menu */
+      mobileMenu: document.querySelector('.mobile-menu'),
+      headerContainer: document.querySelector('.header-menu'),
+      openMenuBtn: document.querySelector('.menu-open'),
+      body: document.getElementsByTagName('body')[0],
+      linkButton: document.querySelectorAll('.navigation-menu__link'),
+      backdrop: document.querySelector('.backdrop'),
   
       // modal-team
     //   openModal: document.querySelector('.open-modal-team'),
