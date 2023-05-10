@@ -1,11 +1,9 @@
 import Api from './api';
-import { Loading } from 'notiflix';
-// import { initRatings } from './init-rating';
-// import { noFilmError, onFetchError } from './msg-error';
+import { initRatings } from './init-rating';
+import { noFilmError, onFetchError } from './components/msg-error';
 import getRefs from './components/get-refs';
-// import { genresList } from './components/genre-list';
-// import { createGallery, clearGallery } from './render-card';
-// import { updateGalleryBySearch } from './pagination-catalog';
+import { genresList } from './components/genre-list';
+import { createGallery, clearGallery } from './render-card';
 
 const searchApi = new Api();
 const refs = getRefs();
@@ -28,7 +26,7 @@ async function onSearchFormSubmit(e) {
 async function searchMovies(query) {
   try {
     const response = await searchApi.searchMovieByQuery(query);
-    console.log(response); //выводит результат поиска сколько нашел
+
     if (response.results === null || response.results.length === 0) {
       noSearchResults();
       clearGallery();
@@ -36,7 +34,6 @@ async function searchMovies(query) {
     }
     else if (response.results) {
       createGallery(response.results.slice(0, 10));
-      updateGalleryBySearch(query); // вызываем функцию обновления галереи по поиску с передачей запроса
     }
 
   } catch (error) {
@@ -56,8 +53,7 @@ function noSearchResults() {
 }
 
 
-// export { onSearchFormSubmit };
-export { onSearchFormSubmit, updateGalleryBySearch };  
+export { onSearchFormSubmit };
 
 // Володя
     
