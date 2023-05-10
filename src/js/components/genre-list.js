@@ -1,5 +1,5 @@
 import { genres } from './genres';
-import Api from './api';
+import Api from '../api';
 
 const api = new Api();
 

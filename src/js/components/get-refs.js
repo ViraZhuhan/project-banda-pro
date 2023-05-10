@@ -50,11 +50,11 @@ export default function getRefs() {
     //   rating: document.querySelector('.rating'),
 
     // seach-form
-    //   searchForm: document.querySelector('.search-form'),
-    //   searchInput: document.querySelector('.search-input-field'),
-    //   movieList: document.querySelector('#movie-list'),
-    //   prevButton: document.querySelector('#btn-back'),
-    //   nextButton: document.querySelector('#btn-next'),
-    //   noSearchCatalog: document.querySelector('.items__message'),
+      searchForm: document.querySelector('.search-form'),
+      searchInput: document.querySelector('.search-input-field'),
+      movieList: document.querySelector('#movie-list'),
+      prevButton: document.querySelector('#btn-back'),
+      nextButton: document.querySelector('#btn-next'),
+      noSearchCatalog: document.querySelector('.items__message'),
   };
 }
