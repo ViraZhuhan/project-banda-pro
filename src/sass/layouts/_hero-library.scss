@@ -153,6 +153,12 @@
   background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
   color: $color-bg-header;
   border: 1px solid $color-text-focus;
+  border-image: linear-gradient(
+    to left,
+    141.22deg,
+    #ffc226 9.4%,
+    #f84119 91.91%
+  );
 
   display: block;
   margin-left: auto;
@@ -168,10 +174,10 @@
     margin-bottom: 108px;
     @include font-text($fs: 18, $lh: 1.5);
   }
-}
 
-.library-cards__btn:hover {
-  background-color: $color-text-primary;
-  border: 1px solid $color-text-focus;
-  color: $color-bg-header;
+  &:hover {
+    background-color: $color-text-primary;
+    border: 1px solid $color-text-focus;
+    color: $color-bg-header;
+  }
 }
