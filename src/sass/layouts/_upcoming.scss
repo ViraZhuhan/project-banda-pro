@@ -1,3 +1,237 @@
+.upcoming{
+    background-color: var(--bg-primary);
+  }
+  .upcoming{
+    padding-top: 32px;
+  @include tablet{
+    padding-top: 44px;
+  }
+  
+  @include desktop{
+    padding-top: 60px;
+  }
+  }
+  .upcoming__title{
+      margin-bottom: 24px;
+      @include font-title($fs:16, $lh:1.19, $ls:0);
+      text-transform: uppercase;
+      color: var(--color-text-primary);
+      left: 0px;
+      top: 0px;
+      @include tablet{
+      @include font-title($fs: 24, $ls: 0.03)
+      }
+      @include desktop{
+      @include font-title;
+      }
+    }
+  .upcoming__info{
+    @include desktop{
+      display: flex;
+    }
+  }
+  
+  .upcoming__info-btn{
+  
+  @include desktop{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+    }
+  
+  }
+  .upcoming__info-layout{
+    @include desktop{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  .upcoming__img{
+    height: 402px;
+  
+    @include tablet{
+    width: 704px;
+    height: 400px;
+    }
+  
+    @include desktop{
+      width: 805px;
+      height: 458px;
+      margin-right: 16px;
+    }
+  }
+  .upcoming__movie-title{
+    margin-top: 24px;
+    @include desktop{
+      margin-top:0;
+    }
+  }
+  .upcoming__item-font-title{
+    font-family: 'Roboto';
+    font-style: normal;
+    text-transform: uppercase;
+    @include font-title($fs:20, $lh:1.15, $ls:0);
+    color: var(--color-text-primary);
+  
+  }
+  
+  .upcoming__item-font-date{
+   margin-right: 57px;
+   
+    @include tablet{
+      margin-right:58px;
+    }
+  }
+  .upcoming__item-font-vote{
+    margin-right: 67px;
+    @include tablet{
+      margin-right:68px;
+    }
+  }
+  
+  .upcoming__item-font-popularity{
+    margin-right: 77px;
+    @include tablet{
+      margin-right:78px;
+    }
+  }
+  .upcoming__item-font-genre{
+    margin-right: 107px;
+    @include tablet{
+      margin-right: 108px;
+    }
+  }
+  
+  .upcoming__list:first-child{
+    list-style: none;
+    margin-top: 20px;
+    @include tablet{
+  margin-right: 118px;
+    }
+  
+  }  
+  
+  .upcoming__list:last-child{
+    @include tel {
+      margin-top: 0;
+    }
+    @include tablet{
+      margin-top: 20px;
+    }
+    @include desktop{
+      margin-top:0;
+    }
+  }
+  .upcoming__list-tablet{
+    @include tablet{
+    display: flex;
+    }
+    @include desktop{
+    flex-direction: column;
+    }
+  }
+  
+  .upcoming__item{
+  display: flex;
+  
+  font-family: 'Roboto';
+  font-style: normal;
+  @include font-title($fs:16, $lh:1.19, $ls:0);
+  color: var( --color-text-info);
+  }
+  
+  .upcoming__item:not(last-child){
+   margin-bottom: 12px; 
+  }
+  .upcoming__item-data{
+  
+   color:$color-accent;
+  
+    font-size: 16px;
+    line-height: 1.19;
+  }
+  .upcoming__item-pop, .upcoming__item-genre{
+    font-size: 16px;
+    line-height: 1.19;
+    color:var(--color-text-data);
+  }
+  .upcoming__item-vote{
+    margin-right: 5px;
+  }
+  .upcoming__item-votes{
+    margin-left: 5px;
+  }
+  .upcoming__item-vote, .upcoming__item-votes{
+    border-radius: 5px;
+    padding: 1px 8px;
+    font-size: 14px;
+    line-height: 1.14;
+    background: var(--bg-votes);
+    color:var(--color-text-vote);
+  }
+  
+  .upcoming__movie-about{
+  display: flex;
+  flex-direction: column;
+  
+  font-family: 'Roboto';
+  font-style: normal;
+  @include font-title($fs:16, $lh:1.19, $ls:0);
+  color: var(--color-text-info);
+  text-transform: uppercase;
+  
+  margin-top: 20px;
+  }
+  
+  .upcoming__item-font-about{
+  margin-top: 16px;
+  font-family: 'Roboto';
+  font-style: normal;
+  @include font-text($fs: 14, $lh: 1.14, $ls: 0);
+  
+  color: var(--color-text-secondary);
+  }
+  .upcoming__button{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 12px 24px;
+    gap: 10px; 
+    margin-top: 20px;
+  
+    width: 119px;
+    height: 40px;
+      
+    font-family: 'Roboto';
+    font-style: normal;
+    @include font-title ($fs: 12, $ls: 0);
+      
+    background: linear-gradient(141.22deg, #FFC226 9.4%, #F84119 91.91%);
+    border-radius: 74px;
+    border: none; 
+    &:hover,
+    &:focus {
+      background: $color-text;
+      border-color: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+      color: $color-accent;
+      border: 1px solid;
+  
+    }
+  
+    @include tablet{
+    @include font-title($fs: 14, $lh: 1.14, $ls: 0);
+    }
+    @include desktop{
+    }
+  
+  }
+  
+
+
+
+
 // .search-wrapper {
 //     display: flex;
 //     gap: 8px;
