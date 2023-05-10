@@ -1,93 +1,93 @@
-// .modal-empty__backdrop {
-//     position: fixed;
+.modal-empty__backdrop {
+    position: fixed;
   
-//     width: 100%;
-//     height: 100%;
-//     top: 0;
-//     left: 0;
-//     z-index: 1;
-//     overflow-y: scroll;
-//     background-color: rgba(0, 0, 0, 0.5);
-//   }
-//   .modal-empty__backdrop--close {
-//     display: none;
-//   }
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .modal-empty__backdrop--close {
+    display: none;
+  }
   
-//   .modal-empty {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
+  .modal-empty {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   
-//     width: 280px;
-//     padding: 39px 33px 8px;
+    width: 280px;
+    padding: 39px 33px 8px;
   
-//     background-color: $color-bg-header;
-//     box-shadow: 1px 1px 14px 4px rgba(255, 107, 8, 0.42);
-//     border-radius: 20px;
+    background-color: $color-bg-header;
+    box-shadow: 1px 1px 14px 4px rgba(255, 107, 8, 0.42);
+    border-radius: 20px;
   
-//     @media screen and (min-width: 769px) {
-//       width: 610px;
-//       height: 400px;
-//       padding: 110px 44px;
-//     }
-//     @media screen and (min-width: 1281px) {
-//       width: 700px;
-//       padding: 140px 50px;
-//     }
-//   }
+    @media screen and (min-width: 769px) {
+      width: 610px;
+      height: 400px;
+      padding: 110px 44px;
+    }
+    @media screen and (min-width: 1281px) {
+      width: 700px;
+      padding: 140px 50px;
+    }
+  }
   
-//   .modal-empty__text {
-//     @include font-text($fw: 400, $fs: 15, $lh: 1.19, $ls: 0.02);
-//     color: $color-text;
-//     margin-bottom: 24px;
+  .modal-empty__text {
+    @include font-text($fw: 400, $fs: 15, $lh: 1.19, $ls: 0.02);
+    color: $color-text;
+    margin-bottom: 24px;
   
-//     @media screen and (min-width: 769px) {
-//       @include font-text($fw: 400, $fs: 24, $lh: 1.66, $ls: 0.02);
-//       margin-bottom: 0;
-//     }
-//   }
+    @media screen and (min-width: 769px) {
+      @include font-text($fw: 400, $fs: 24, $lh: 1.66, $ls: 0.02);
+      margin-bottom: 0;
+    }
+  }
   
-//   .modal-empty__thumb {
-//     width: 159px;
-//     margin: 0 auto;
+  .modal-empty__thumb {
+    width: 159px;
+    margin: 0 auto;
   
-//     @media screen and (min-width: 769px) {
-//       position: absolute;
-//       right: 10px;
-//       bottom: 16px;
-//       width: 296px;
-//     }
-//     @media screen and (min-width: 1281px) {
-//       right: 0;
-//       bottom: 5px;
-//       width: 363px;
-//     }
-//   }
+    @media screen and (min-width: 769px) {
+      position: absolute;
+      right: 10px;
+      bottom: 16px;
+      width: 296px;
+    }
+    @media screen and (min-width: 1281px) {
+      right: 0;
+      bottom: 5px;
+      width: 363px;
+    }
+  }
   
-//   .modal-empty__close {
-//     position: absolute;
+  .modal-empty__close {
+    position: absolute;
   
-//     top: 20;
-//     right: 20;
-//     width: 16px;
-//     height: 16px;
-//     padding: 0;
-//     background-color: $color-bg-header;
-//     border: none;
+    top: 20;
+    right: 20;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    background-color: $color-bg-header;
+    border: none;
   
-//     @media screen and (min-width: 769px) {
-//       width: 24px;
-//       height: 24px;
-//     }
+    @media screen and (min-width: 769px) {
+      width: 24px;
+      height: 24px;
+    }
   
-//     & svg {
-//       width: 16px;
-//       height: 16px;
-//       @media screen and (min-width: 769px) {
-//         width: 24px;
-//         height: 24px;
-//       }
-//     }
-//   }
+    & svg {
+      width: 16px;
+      height: 16px;
+      @media screen and (min-width: 769px) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
   

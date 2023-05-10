@@ -1,176 +1,176 @@
-// .card-catalog {
-//     background-color: var(--bg-primary);
-//     padding-top: 16px;
+.card-catalog {
+    background-color: var(--bg-primary);
+    padding-top: 16px;
 
-//     @include tablet {
-//         padding-top: 36px;
-//     }
+    @include tablet {
+        padding-top: 36px;
+    }
 
-//     @include desktop {
-//         padding-top: 48px;
-//     }
-// }
+    @include desktop {
+        padding-top: 48px;
+    }
+}
 
-// .gallery {
-//     display: flex;
-//     row-gap: 16px;
-//     column-gap: 16px;
-//     flex-direction: column;
-//     flex-wrap: wrap;
+.gallery {
+    display: flex;
+    row-gap: 16px;
+    column-gap: 16px;
+    flex-direction: column;
+    flex-wrap: wrap;
 
-//     @include tablet {
-//         flex-direction: row;
-//         row-gap: 32px;
-//         column-gap: 16px;
-//     }
-// }
+    @include tablet {
+        flex-direction: row;
+        row-gap: 32px;
+        column-gap: 16px;
+    }
+}
 
-// .gallery__item {
-//     position: relative;
-//     width: 100%;
+.gallery__item {
+    position: relative;
+    width: 100%;
  
-//     @include tablet {
-//         width: calc((100% - 32px)/3);
-//     }
+    @include tablet {
+        width: calc((100% - 32px)/3);
+    }
 
-//     &:hover {
-//         scale: 1.01;
-//     }
-// }
+    &:hover {
+        scale: 1.01;
+    }
+}
 
-// .gallery__img {
-//     width: 100%;
-//     border-radius: 5px;
-// }
+.gallery__img {
+    width: 100%;
+    border-radius: 5px;
+}
 
-// .gallery__details {
-//     content: '';
-//     position: absolute;
-//     width: 100%;
-//     background: linear-gradient(180deg,
-//             rgba(0, 0, 0, 0) 63.48%,
-//             rgba(0, 0, 0, 0.9) 92.16%);
-//     border-radius: 5px;
-//     bottom: 0;
-//     left: 0;
-//     padding-top: 100%;
-//     padding-right: 12px;
-//     padding-bottom: 12px;
-//     padding-left: 12px;
+.gallery__details {
+    content: '';
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0) 63.48%,
+            rgba(0, 0, 0, 0.9) 92.16%);
+    border-radius: 5px;
+    bottom: 0;
+    left: 0;
+    padding-top: 100%;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
 
-//     @include desktop {
-//         padding-top: 100%;
-//         padding-right: 20px;
-//         padding-bottom: 20px;
-//         padding-left: 20px;
-//     }
-// }
+    @include desktop {
+        padding-top: 100%;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+}
 
-// .details__title {
-//     @include font-title ($fs: 12, $lh: 1.66);
-//     text-transform: uppercase;
-//     color: $color-primary-light;
+.details__title {
+    @include font-title ($fs: 12, $lh: 1.66);
+    text-transform: uppercase;
+    color: $color-primary-light;
 
-//     @include tablet {
-//         line-height: 1.5;
-//     }
+    @include tablet {
+        line-height: 1.5;
+    }
 
-//     @include desktop {
-//         font-size: 20px;
-//         line-height: 1.15;
-//         margin-bottom: 8px;
-//     }
-// }
+    @include desktop {
+        font-size: 20px;
+        line-height: 1.15;
+        margin-bottom: 8px;
+    }
+}
 
-// .movieGenres {
-//     @include font-title ($fs: 12, $lh: 1.66);
-//     color: $color-neutral-light;
+.movieGenres {
+    @include font-title ($fs: 12, $lh: 1.66);
+    color: $color-neutral-light;
 
-//     @include tablet {
-//         line-height: 1.5;
-//     }
+    @include tablet {
+        line-height: 1.5;
+    }
 
-//     @include desktop {
-//         font-size: 20px;
-//         line-height: 1.15px;
-//     }
-// }
+    @include desktop {
+        font-size: 20px;
+        line-height: 1.15px;
+    }
+}
 
-// .rating__value {
-//     display: flex;
-//     width: 1px;
-//     margin-left: auto;
-//     margin-right: auto;
+.rating__value {
+    display: flex;
+    width: 1px;
+    margin-left: auto;
+    margin-right: auto;
 
-//     font-size: 1px;
-//     color: transparent;
-//     text-align: flex-end;
-// }
+    font-size: 1px;
+    color: transparent;
+    text-align: flex-end;
+}
 
-// .wraper__details {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-// }
+.wraper__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-// // ------------- RATING------------
-// .rating {
-//     display: flex;
-//     align-items: flex-end;
+// ------------- RATING------------
+.rating {
+    display: flex;
+    align-items: flex-end;
     
-//     font-size: 14px;
-//     line-height: 0.75;
+    font-size: 14px;
+    line-height: 0.75;
 
-//     @include tablet {
-//         font-size: 10px;
-//     }
+    @include tablet {
+        font-size: 10px;
+    }
 
-//     @include desktop {
-//         font-size: 18px;
-//     }
-// }
+    @include desktop {
+        font-size: 18px;
+    }
+}
 
-// .rating__body {
-//     position: relative;
-// }
+.rating__body {
+    position: relative;
+}
 
-// .rating__body::before {
-//     content: '✰✰✰✰✰';
-//     display: block;
-//     color: $color-stars;
-// }
+.rating__body::before {
+    content: '✰✰✰✰✰';
+    display: block;
+    color: $color-stars;
+}
 
-// .rating__active {
-//     position: absolute;
-//     width: 0%;
-//     height: 100%;
-//     bottom: 0;
-//     left: 0;
-//     overflow: hidden;
-// }
+.rating__active {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
 
-// .rating__active::before {
-//     content: '★★★★★';
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     bottom: 0;
-//     left: 0;
+.rating__active::before {
+    content: '★★★★★';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
 
-//     fill: $color-stars;
-// }
+    fill: $color-stars;
+}
 
-// .rating__items {
-//     display: flex;
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     bottom: 0;
-//     left: 0;
-// }
+.rating__items {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+}
 
-// .rating__item {
-//     width: 20%;
-//     height: 100%;
-//     opacity: 0;
-// }
+.rating__item {
+    width: 20%;
+    height: 100%;
+    opacity: 0;
+}
