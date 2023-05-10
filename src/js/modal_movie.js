@@ -55,8 +55,7 @@ export async function modalMovie(id) {
     refs.backdrop.style.backgroundSize = 'cover';
     refs.backdrop.style.backgroundRepeat = 'no-repeat';
     refs.backdrop.style.backgroundPosition = 'center';
-    refs.backdrop.style.opacity = '0.7';
-    
+
     refs.modal.innerHTML = `
     <img class="modal__img" src=${imageUrl} alt=${
       data.original_name
@@ -118,7 +117,6 @@ export async function modalMovie(id) {
         const indexMovie = objects.findIndex(obj => obj.id === id);
         objects.splice(indexMovie, 1);
         localStorage.setItem(KEY, JSON.stringify(objects));
-        location.reload();
         buttonAdd.classList.remove('hidden');
         buttonRemove.classList.add('hidden');
       } catch (error) {
