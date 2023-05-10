@@ -1,7 +1,7 @@
-// import { modalMovie } from './modal_movie';
-// import { createGallery } from './render-card';
+import { modalMovie } from './modal_movie';
+import { createGallery } from './render-card';
 
-// import { refs } from './modal_movie';
+import { refs } from './modal_movie';
 
 const movieClicked = document.querySelector('.library-cards__list');
 const noFilmsMessage = document.querySelector('.alert__message');
