@@ -114,8 +114,13 @@ export default class Api {
   }
 
   async getDetailsById(id) {
-    const str = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`;
-    return fetch(str).then(res => res.json());
+    try {
+      const response = await fetch(`${URL_GET_MOVIE}/${id}?api_key=${API_KEY}&language=en-US`);
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      throw new Error('Error fetching movie data: ' + error);
+    }
   }
 
   async fetchGenres() {

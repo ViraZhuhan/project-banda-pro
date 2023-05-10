@@ -1,463 +1,177 @@
-// //!=========================BASE=======================================
-// .hero {
-//     display: flex;
-//     position: relative;
-  
-//     height: 380px;
-//     //   overflow: hidden;
-//     width: 100vw;
-//     // margin: 0 auto;
-  
-//     margin-left: auto;
-//     margin-right: auto;
-  
-//     background-position: 0 0, -50px 0;
-//     background-repeat: no-repeat;
-//     background-size: auto, cover;
-  
-//     @include tablet {
-//       // height: 432px;
-//       height: 372px;
-//       // max-width: 768px;
-  
-//       background-position: 0px 0px, 170px 0px;
-//       background-size: contain, contain;
-//     }
-  
-//     @include desktop {
-//       height: 660px;
-//       // max-width: 1280px;
-  
-//       background-size: auto, cover;
-//       background-repeat: no-repeat;
-//       background-position: 0px -60px, 275px -60px;
-//     }
-//   }
-  
-//   .hero__wrapper {
-//     //   position: absolute;
-//     display: flex;
-//     //   justify-content: space-around;
-//     //   padding-top: 40px;
-//     align-items: flex-start;
-//     flex-direction: column;
-//     color: $color-text;
-//     // width: 464px;
-//     z-index: 1;
-//     width: 250px;
-//     height: 100%;
-//     padding-top: 40px;
-//     margin-left: 20px;
-  
-//     @include tablet {
-//       padding-top: 36px;
-//       width: 350px;
-//       margin-left: 32px;
-  
-//       // justify-content: center;
-//     }
-  
-//     @include desktop {
-//       width: 464px;
-//       margin-left: 130px;
-  
-//       // height: 322px;
-//       padding-top: 118px;
-//       // padding-bottom: auto;
-//     }
-//   }
-  
-//   .buttons {
-//     display: block;
-//     //   margin-top: 16px;
-//     outline: none;
-//     font-weight: 500;
-//     font-size: 12px;
-//     line-height: 1.2;
-//     // height: 48px;
-//     padding: 12px 24px;
-//     font-family: 'Roboto';
-//     font-style: normal;
-//     color: $color-primary-dark;
-  
-//     background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
-//     border-radius: 74px;
-//     //   border: solid 1px;
-  
-//     &:hover,
-//     &:focus {
-//       background: $color-text;
-//       border-color: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
-//       color: $color-accent;
-//     }
-  
-//     @include tablet {
-//       font-size: 14px;
-//       line-height: 1.4;
-//     }
-  
-//     @include desktop {
-//       font-size: 16px;
-//       line-height: 1.5;
-//     }
-//   }
-  
-//   .paragraphs {
-//     display: inline-block;
-//     width: 166px;
-  
-//     font-family: 'Roboto';
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 14px;
-//     line-height: 16px;
-//     color: #f8f8f8;
-  
-//     @include desktop {
-//       font-size: 16px;
-//       line-height: 19px;
-//     }
-//   }
-  
-//   // .subtract {
-//   //   position: absolute;
-//   //   background-repeat: no-repeat;
-//   //   height: 380px;
-  
-//   //   width: 100vw;
-//   //   z-index: 998;
-//   //   top: 0;
-//   //   left: 0;
-  
-//   //   background-image: url('../images/hero-black-tel.png');
-//   //   // ?  ==========================HERE=======================================
-//   //   //   background-image: linear-gradient(
-//   //   //       87.8deg,
-//   //   //       #0e0e0e 15.61%,
-//   //   //       rgba(14, 14, 14, 0) 60.39%
-//   //   //     ),
-//   //   //     url('../images/hero-black-tel.png');
-//   //   //   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-//   //   // ?  =================================================================
-  
-//   //   // @include retina{
-//   //   //     background-image: url('../images/hero-black-tel2x.png') ;
-//   //   // }
-  
-//   //   @include tablet {
-//   //     background-image: url('../images/hero-black-tab.png');
-//   //     height: 432px;
-//   //   }
-  
-//   //   @include desktop {
-//   //     height: 720px;
-  
-//   //     background-image: url('../images/hero-black-desk.png');
-//   //   }
-//   // }
-  
-//   //!=============================HOME===================================
-  
-//   .hero__bg--img {
-//     // display: block;
-//     position: absolute;
-//     background-repeat: no-repeat;
-//     width: 100vw;
-//     // background-size: cover;
-//     //
-//     // width: 100%;
-//     height: 380px;
-//     left: 0;
-//     top: 0;
-  
-//     // margin-right: auto;
-  
-//     @include tel {
-//       //    width: 100%;
-//       // background-size: contain;
-//       background-image: url('../images/hero-home-tel.jpg');
-  
-//       @include retina {
-//         background-image: url('../images/hero-home-tel2x.jpg');
-//       }
-//     }
-  
-//     @include tablet {
-//       background-image: url('../images/hero-home-tab.jpg');
-//       // left: 286px;
-//       height: 432px;
-//       margin-left: 286px;
-  
-//       @include retina {
-//         background-image: url('../images/hero-home-tab2x.jpg');
-//       }
-//     }
-  
-//     @include desktop {
-//       height: 720px;
-//       margin-left: 478px;
-//       // left: 478px;
-//       // transform: translate(-30%,-30% );
-//       // object-fit: cover;
-//       // margin-left: auto;
-//       background-image: url('../images/hero-home-desk.jpg');
-  
-//       @include retina {
-//         background-image: url('../images/hero-home-desk2x.jpg');
-//       }
-//     }
-//   }
-  
-//   // .hero__home--wrapper {
-//   //   //   padding-top: 40px;
-//   //   //   padding-bottom: 89px;
-//   //   z-index: 999;
-//   //   width: 199px;
-//   //   height: auto;
-  
-//   //   @include tablet {
-//   //     width: 357px;
-//   //     // height: 248px;
-  
-//   //     // padding-top: 62px;
-//   //     // padding-bottom: 62px;
-//   //   }
-  
-//   //   @include desktop {
-//   //     width: 464px;
-//   //     // height: 322px;
-//   //     // padding-top: 169px;
-//   //     // padding-bottom: 169px;
-//   //   }
-//   // }
-  
-//   // .hero__home--subtract {
-  
-//   // }
-  
-//   .hero__title {
-//     font-size: 32px;
-//     line-height: 38px;
-//     display: flex;
-//     align-items: center;
-//     flex: none;
-//     order: 0;
-//     flex-grow: 0;
-  
-//     @include tablet {
-//       font-size: 44px;
-//       line-height: 52px;
-//     }
-  
-//     @include desktop {
-//       font-size: 64px;
-//       line-height: 75px;
-//     }
-//   }
-  
-//   .hero__text {
-//     margin-top: 8px;
-  
-//     @include desktop {
-//       margin-top: 16px;
-//     }
-//   }
-  
-//   .paragraph__hidden {
-//     display: none;
-  
-//     @include tablet {
-//       display: block;
-//     }
-//   }
-  
-//   .hero__btn {
-//     width: 110px;
-//     margin-top: 16px;
-//     @include tablet {
-//       width: 120px;
-//       margin-top: 32px;
-//     }
-  
-//     @include desktop {
-//       width: 130px;
-//     }
-//   }
-  
-//   //!==============================HERO MOVIE MARKUP STYLES==================================
-  
-//   // .slider {
-//   //   display: flex;
-//   //   flex-direction: row;
-//   //   justify-content: center;
-  
-//   // //   margin-top: 52px;
-  
-//   // }
-//   // .slider__item {
-//   //   // position: relative;
-  
-//   //   width: 24px;
-//   //   height: 24px;
-  
-//   //   @include tablet {
-//   //     width: 32px;
-//   //     height: 32px;
-//   //   }
-  
-//   //   @include desktop {
-//   //     width: 40px;
-//   //     height: 40px;
-//   //   }
-  
-//   //   &:not(:last-child) {
-//   //     margin-right: 16px;
-//   //     //   color: #b7b7b7;
-//   //   }
-//   // }
-  
-//   // .hero__slider-btn {
-//   //   display: flex;
-//   //   justify-content: center;
-//   //   align-items: center;
-//   //   // position: relative;
-  
-//   //   //   position: absolute;
-//   //   //   top: 50%;
-//   //   //   align-items: center;
-//   //   cursor: pointer;
-//   //   background-color: transparent;
-//   //   width: 24px;
-//   //   height: 24px;
-  
-//   //   //   position: relative;
-//   //   // align-items: center;
-//   //   // justify-content: center;
-//   //   //   top: 34%;
-//   //   //   left: 38%;
-//   //   font-family: 'Roboto';
-//   //   font-style: normal;
-//   //   font-weight: 400;
-//   //   font-size: 14px;
-//   //   line-height: 14px;
-//   //   border: 1px solid #b7b7b7;
-//   //   border-radius: 50%;
-//   //   /* identical to box height, or 100% */
-  
-//   //   /* Grey */
-  
-//   //   color: $color-text-secondary;
-  
-//   //   transition-property: background-color, color;
-//   //   transition-duration: 250ms;
-//   //   transition-timing-function: $cubic;
-  
-//   //   &:hover,
-//   //   &:focus {
-//   //     color: $color-text;
-//   //     background-color: $color-text-focus;
-//   //   }
-  
-//   //   @include tablet {
-//   //     width: 32px;
-//   //     height: 32px;
-//   //   }
-  
-//   //   @include desktop {
-//   //     width: 40px;
-//   //     height: 40px;
-//   //   }
-//   // }
-  
-//   .watch__btn {
-//     //   width: 117px;
-//     //   height: 38px;
-//     margin-top: 16px;
-//     @include tablet {
-//       margin-top: 28px;
-//       // width: 128px;
-//       // height: 40px;
-//     }
-  
-//     @include desktop {
-//       margin-top: 36px;
-//       // width: 139px;
-//       // height: 48px;
-//     }
-//   }
-  
-//   .hero__movie-descripton {
-//     //   margin-top: 16px;
-  
-//     width: 100%;
-//     overflow: hidden;
-  
-//     //   @include desktop {
-//     //     margin-top: 28px;
-//     //   }
-//   }
-  
-//   // .hero__movie--wrapper {
-//   //   display: flex;
-//   //   justify-content: space-evenly;
-//   //   align-items: flex-start;
-  
-//   //   position: absolute;
-//   //   z-index: 999;
-//   //   width: 199px;
-//   //   height: auto;
-  
-//   //   width: 250px;
-//   //   height: 100%;
-//   //   flex-direction: column;
-//   //   //   padding-top: 40px;
-//   //   //   padding-bottom: 28px;
-  
-//   //   @include tablet {
-  
-//   //     width: 350px;
-  
-//   //     // padding-top: 36px;
-//   //     // padding-bottom: 36px;
-//   //   }
-  
-//   //   @include desktop {
-//   //     width: 464px;
-  
-//   //     // padding-bottom: 178px;
-//   //     // padding-top: 118px;
-//   //   }
-//   // }
-  
-//   .hero__vote {
-//     display: flex;
-//     align-items: center;
-//     margin-top: 12px;
-  
-//     @include desktop {
-//       margin-top: 16px;
-//     }
-//   }
-  
-//   .hero__movie-title {
-//     font-size: 32px;
-//     line-height: 38px;
-//     display: flex;
-//     align-items: center;
-//     flex: none;
-//     order: 0;
-//     flex-grow: 0;
-  
-//     color: $color-text;
-  
-//     @include tablet {
-//       font-size: 44px;
-//       line-height: 52px;
-//     }
-  
-//     @include desktop {
-//       font-size: 64px;
-//       line-height: 75px;
-//     }
-//   }
-  
+// .hero-library__container
+.hero-library {
+  padding-top: 40px;
+  padding-bottom: 114px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(
+      83.48deg,
+      #0e0e0e 25.78%,
+      rgba(14, 14, 14, 0) 60.07%
+    ),
+    url(/src/images/hero-tel.jpg);
+  border: 1px solid #000000;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-width: 100vw;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-library {
+      background-image: url(/src/images/hero-tel-2x.jpg);
+    }
+  }
+
+  @include tablet {
+    background: linear-gradient(
+        83.48deg,
+        #0e0e0e 25.78%,
+        rgba(14, 14, 14, 0) 60.07%
+      ),
+      url(/src/images/hero-tab.jpg);
+    border: 1px solid #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-library {
+      background-image: url(/src/images/hero-tab-2x.jpg);
+    }
+  }
+
+  @include desktop {
+    background: linear-gradient(
+        83.48deg,
+        #0e0e0e 25.78%,
+        rgba(14, 14, 14, 0) 60.07%
+      ),
+      url(/src/images/hero.jpg);
+    border: 1px solid #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-library {
+      background-image: url(/src/images/hero-2x.jpg);
+    }
+  }
+}
+
+.hero-library__title {
+  @include font-title($fw: 700, $fs: 32, $lh: 1.19);
+  font-family: 'Roboto';
+  margin-bottom: 8px;
+  padding-left: 20px;
+  padding-right: 65px;
+
+  color: $color-text;
+
+  display: flex;
+  align-items: center;
+
+  @include tablet {
+    @include font-title($fs: 44, $lh: 1.18);
+    padding-left: 32px;
+  }
+
+  @include desktop {
+    @include font-title($fs: 64, $lh: 1.18);
+    padding-left: 117px;
+    margin-bottom: 16px;
+  }
+}
+
+.hero-library__text {
+  @include font-text($fs: 14, $lh: 1.14);
+  font-family: 'Roboto';
+  padding-left: 20px;
+  padding-right: 51px;
+
+  color: $color-text-primary;
+
+  @include tablet {
+    padding-left: 32px;
+    width: 450px;
+  }
+
+  @include desktop {
+    @include font-text($fs: 16, $lh: 1.18);
+    width: 650px;
+    padding-left: 117px;
+  }
+}
+
+.library-cards__sorry {
+  @include font-text($fs: 20, $lh: 1.4);
+  // text color for night theme:
+  // color: $color-text;
+
+  // text color for white theme :
+  //  color: $color-bg-header;
+
+  text-align: center;
+  padding-left: 21px;
+  padding-right: 19px;
+  margin-top: 44px;
+  margin-bottom: 20px;
+
+  @include tablet {
+    @include font-text($fs: 24, $lh: 1.3);
+    margin-top: 80px;
+    margin-bottom: 24px;
+    padding-left: 165px;
+    padding-right: 165px;
+    margin-bottom: 24px;
+  }
+
+  @include desktop {
+    @include font-text($fs: 32, $lh: 1.12);
+    margin-bottom: 28px;
+    margin-top: 160px;
+  }
+}
+
+.library-cards__btn {
+  @include font-text($fw: 500, $fs: 12, $lh: 1.16);
+
+  padding: 12px 24px;
+  border-radius: 74px;
+  font-size: 12px;
+  line-height: 1.33;
+  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  color: $color-bg-header;
+  border: 1px solid $color-text-focus;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 42px;
+
+  @include tablet {
+    @include font-text($fs: 14, $lh: 1.14);
+    margin-bottom: 60px;
+  }
+
+  @include desktop {
+    margin-bottom: 108px;
+    @include font-text($fs: 18, $lh: 1.5);
+  }
+}
+
+.library-cards__btn:hover {
+  background-color: $color-text-primary;
+  border: 1px solid $color-text-focus;
+  color: $color-bg-header;
+}
