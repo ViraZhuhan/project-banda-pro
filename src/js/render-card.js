@@ -1,78 +1,59 @@
-import Api from './api';
-import { Loading } from 'notiflix';
-import {initRatings} from './init-rating'
-import cardsTpl from '../templates/cards.hbs';
-import { noFilmError, onFetchError} from './msg-error';
-import getRefs from './get-refs';
-import genres from './genres';
+import { initRatings } from './init-rating';
+import getRefs from './components/get-refs';
+import { genresList } from './components/genre-list';
+import initRating from './init-rating';
 
-const weeklyTrendsApi = new Api();
 const refs = getRefs();
 
-
-const seachApi = new Api();
-
-
 function markup(data) {
-    return data.map(
-      ({ poster_path, title, vote_average, release_date, genre_ids  }) =>
-        `<li class="gallery__item">
+  return data.map(
+    ({ poster_path, title, vote_average, release_date, genre_ids, id }) => {
+      const genres = genresList(genre_ids);
+      const release = new Date(release_date).getFullYear();
+
+      const imageUrl = poster_path
+        ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+        : 'https://via.placeholder.com/395x574?text=No+Image';
+
+      // initRatings();
+
+      return `<li class="gallery__item" id='${id}'>
         <article>
-        <img class="article__img" src="https://image.tmdb.org/t/p/w500/${poster_path}" alt="${title}" width="395" >
-          <div class="details">
-            <p class="title__txt">${title}</p>
+        <img class="gallery__img" src="${imageUrl}" alt="${title}" width="395" >
+          <div class="gallery__details">
+            <p class="details__title">${title}</p>
             <div class="wraper__details">
-            <p class="movieGenres">${genre_ids} | ${release_date}</p>
-             <div class="rating">
+            <p class="movieGenres">${genres} | ${release}</p>
+              <div class="rating">
               <div class="rating__body">
               <div class="rating__active" style="width: ${
                 vote_average * 10
               }%;"></div>>
-               </div>
+                <div class="rating__items">
+                  <input type="radio" class="rating__item" value="1" name="rating" />
+                  <input type="radio" class="rating__item" value="2" name="rating" />
+                  <input type="radio" class="rating__item" value="3" name="rating" />
+                  <input type="radio" class="rating__item" value="4" name="rating" />
+                  <input type="radio" class="rating__item" value="5" name="rating" />
+                </div>
+              </div>
               <div class="rating__value">${vote_average}</div>
             </div>
             </div>
           </div>
         </article>
-        </li>`
-    )
-  }
-
-
-async function createWeekTrends() {
-  try {
-    const response = await seachApi.weekTrends();
-    createGallery(response.results.slice(0, 10));
-  } catch (error) {
-    console.log(error)
-  }
+        </li>`;
+    }
+  );
 }
 
 function createGallery(films) {
   clearGallery();
-  refs.gallery.insertAdjacentHTML('beforeend', markup(films));
-
+  refs.gallery.innerHTML = markup(films).join('');
 }
 
 function clearGallery() {
-    refs.gallery.innerHTML = '';
+  refs.gallery.innerHTML = '';
 }
 
-
-// function genresList(idGenres) {
-//       let namesGenres = [];
-//       for (let i; i < idGenres.length; i += 1) {
-//         const item = genres.find(el => el.id === idGenres[i]);
-//         namesGenres.push(item.name);
-//       }
-//       console.log(namesGenres);
-//       return namesGenres;
-//     }
-    
-//     genresList([12, 15]) 
-
-
-
-createWeekTrends();
-
-export {createWeekTrends};
+export { createGallery, clearGallery };
