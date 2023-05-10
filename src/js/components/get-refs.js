@@ -1,9 +1,9 @@
 export default function getRefs() {
     return {
-      // theme-toggle
-    //   html: document.documentElement,
-    //   savedTheme: localStorage.getItem('color-theme'),
-    //   switcher: document.querySelector('.switch input[type="checkbox"]'),
+      /* theme-toggle */
+      html: document.documentElement,
+      savedTheme: localStorage.getItem('color-theme'),
+      switcher: document.querySelector('.switch input[type="checkbox"]'),
   
       // render-cards
     //   rating: document.querySelectorAll('.rating'),
