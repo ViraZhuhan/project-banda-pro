@@ -18,7 +18,7 @@ function markup(data) {
 
       return `<li class="gallery__item" id='${id}'>
         <article>
-        <img class="gallery__img" src="${imageUrl}" alt="${title}" width="395" >
+        <img class="gallery__img" src="${imageUrl}" alt="${title}" loading="lazy" width="395" >
           <div class="gallery__details">
             <p class="details__title">${title}</p>
             <div class="wraper__details">
