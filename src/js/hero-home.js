@@ -1,8 +1,6 @@
 import Api from './api';
 
-// // import getRefs from './get-refs';
-// // import { noFilmError, onFetchError } from './msg-error';
-import { onOpenHeroModal, getMovieOfDayTrendId } from './hero-trailer';
+import { onOpenHeroModal } from './hero-trailer';
 // import { initRatings } from './init-rating';
 
 const refs = {

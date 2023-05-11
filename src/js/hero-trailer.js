@@ -15,7 +15,17 @@ const api = new Api();
 
 let currentId;
 
-export { onOpenHeroModal, getMovieOfDayTrendId };
+function onClickOverlay(event) {
+  if (event.target === event.currentTarget) {
+    onCloseHeroModal();
+  }
+}
+
+function onEscKeyPress(event) {
+  if (event.code === 'Escape') {
+    onCloseHeroModal();
+  }
+}
 
 function onOpenHeroModal() {
   if (refs.modalWrapperRef.innerHTML === '') {
@@ -32,23 +42,6 @@ function onCloseHeroModal() {
   refs.modalWrapperRef.innerHTML = '';
 }
 
-function onClickOverlay(event) {
-  if (event.target === event.currentTarget) {
-    onCloseHeroModal();
-  }
-}
-
-function onEscKeyPress(event) {
-  if (event.code === 'Escape') {
-    onCloseHeroModal();
-  }
-}
-
-function getMovieOfDayTrendId(id) {
-  currentId = id;
-  getCurrentMovieTrailer(id);
-}
-
 async function getCurrentMovieTrailer(id) {
   try {
     const response = await api.getDetailsById(id);
@@ -59,10 +52,11 @@ async function getCurrentMovieTrailer(id) {
 }
 
 function findMovieTrailer(videos) {
-  const OfficialTrailer = videos.find(video => video.type === 'Trailer');
+  const trailer = videos.find(video => video.type === 'Trailer');
 
-  if (OfficialTrailer) {
-    addTrailerOnModal(OfficialTrailer);
+  if (trailer) {
+    
+    addTrailerOnModal(trailer);
   } else {
     addBasicHeroModalMarkup();
   }
@@ -93,3 +87,5 @@ function addTrailerOnModal({ key }) {
 
   refs.modalWrapperRef.innerHTML = modalMarkup;
 }
+
+export { onOpenHeroModal };
