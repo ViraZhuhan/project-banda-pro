@@ -53,6 +53,7 @@ function renderHeroPageMarkup({
         : 'https://via.placeholder.com/395x574?text=No+Image';
 
         refs.heroRef.style.backgroundImage = `url("${imageUrl}")`;
+        refs.heroRef.classList.add('bg-image');
 
         divEl = `
         <div>
@@ -72,6 +73,7 @@ function renderHeroPageMarkup({
           </div>
           <div class="rating__value">${vote_average}</div>
         </div>
+        <p class = "hero__text">${overview}</p>
         <button type="button" class="hero__button" id="trailer" >Watch trailer</button>
         <div>
        `;       

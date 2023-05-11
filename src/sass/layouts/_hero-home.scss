@@ -63,6 +63,7 @@
   font-weight: 700;
   font-size: 32px;
   line-height: 38px;
+  text-align: start;
 
   color: white;
 
@@ -95,6 +96,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+  text-align: start;
 
   margin-top: 8px;
   width: 166px;
@@ -232,4 +234,13 @@
   @include desktop {
     margin-top: 16px;
   }
+}
+
+.bg-image { 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 0;
 }
