@@ -6,6 +6,8 @@ import initRating from './init-rating';
 
 const refs = getRefs();
 
+const hero_poster = document.querySelector('.hero__movie-poster');
+
 // const root = document.documentElement;
 
 // import SubstructBlackDesk from '../images/hero-black-desk.png';
@@ -52,11 +54,11 @@ function renderHeroPageMarkup({
         ? `https://image.tmdb.org/t/p/w1280/${poster_path}`
         : 'https://via.placeholder.com/395x574?text=No+Image';
 
-        refs.heroRef.style.backgroundImage = `url("${imageUrl}")`;
-        refs.heroRef.classList.add('bg-image');
+        hero_poster.style.backgroundImage = `url("${imageUrl}")`;
+        /* refs.heroRef.classList.add('bg-image'); */
 
         divEl = `
-        <div>
+        <div class="hero__info">
         <h1 class="hero__title">${title}</h1>
         <div class="rating hero__vote">
           <div class="rating__body">
@@ -73,7 +75,7 @@ function renderHeroPageMarkup({
           </div>
           <div class="rating__value">${vote_average}</div>
         </div>
-        <p class = "hero__text">${overview}</p>
+        <p class = "hero__text">${overview.slice(0, 150) + '...'}</p>
         <button type="button" class="hero__button" id="trailer" >Watch trailer</button>
         <div>
        `;       

@@ -2,7 +2,9 @@
   position: relative;
   overflow: hidden;
   height: 380px;
-  max-width: 320px;
+  width: 100%;
+  background-color: var(--bg-hero);
+ /*  max-width: 320px; */
   // left: 50%;
 
   margin-left: auto;
@@ -14,37 +16,99 @@
 
   @include tablet {
     height: 432px;
-    max-width: 768px;
+    /* max-width: 768px; */
 
     // background-position: 0px 0px, 225px 0px;
     // background-size: auto, contain;
   }
   @include desktop {
     height: 660px;
-    max-width: 1280px;
+    /* max-width: 1280px; */
 
     // background-size: auto, cover;
     // background-repeat: no-repeat;
     // background-position: 0px -60px, 225px -60px;
+  }
+  &__background {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+    padding: 0;
+    border: 2px solid red;
+  }
+
+  &__background-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__decorator {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    @include tablet {
+      background-image: var(--bg-image-hero-tablet);
+    }
+    @include desktop {
+      background-image: var(--bg-image-hero-desktop);
+    }
+  }
+
+  &__movie-poster {
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    /* border: 5px solid greenyellow; */
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    @include tablet {
+      width: 482px;
+      background-position-y: top;
+      background-size: cover;
+    }
+    @include desktop {
+      width: 802px;
+      background-position-y: top;
+      background-position-x: 84px;
+      background-size: cover;
+    }
+  }
+
+  &__info {
+    width: 250px;
+    @include tablet {
+      width: 300px;
+    }
+    @include desktop {
+      width: 464px;
+    }
   }
 }
 
 .hero__wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
-
-  width: 250px;
+  
+  /* width: 250px; */
   height: 100%;
   // padding-top: 40px;
 
   @include tablet {
-    width: 300px;
+    /* width: 300px; */
     padding-top: 0px;
     justify-content: center;
   }
   @include desktop {
-    width: 464px;
+    /* width: 464px; */
   }
 }
 
@@ -73,17 +137,17 @@
   @include tablet {
     height: 432px;
     // padding: 25px 36px;
-    background-image: url('/src/images/hero-black-tab.png');
+    background-image: var(--bg-image-hero-tablet);
     background-position: bottom;
   }
 
   @include desktop {
     height: 660px;
     // padding: 118px 134px;
-    background-image: url('/src/images/hero-black-desk.png');
+    background-image: var(--bg-image-hero-desktop);
   }
 
-  &.light {
+  /* &.light {
     @media screen and (min-width: 768px) {
       background-image: url('/src/images/hero-white-tab.png');
     }
@@ -91,7 +155,7 @@
     @media screen and (min-width: 1280px) {
       background-image: url('/src/images/hero-white-desk.png');
     }
-  }
+  } */
 
   // @include desktop {
   //   padding-left: 32px;
@@ -307,6 +371,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 12px 22px;
   gap: 10px;
