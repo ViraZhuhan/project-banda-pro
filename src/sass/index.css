@@ -1183,7 +1183,6 @@ input:checked + .switch__marker {
   align-items: flex-start;
   width: 250px;
   height: 100%;
-  padding-top: 40px;
 }
 @media screen and (min-width: 768px) {
   .hero__wrapper {
@@ -1235,30 +1234,23 @@ input:checked + .switch__marker {
   }
 }
 
-.hero-api-img {
-  position: relative;
+.bg-image {
+  background-size: auto 100%;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  margin: 0 auto;
-  text-align: center;
-  z-index: 0;
+  background-image: linear-gradient(87.8deg, #0e0e0e 15.61%, rgba(14, 14, 14, 0) 60.39%), url("/src/images/hero-black-tel.png");
 }
 @media screen and (min-width: 768px) {
-  .hero-api-img {
-    height: 432px;
-    max-width: 768px;
-    background-position: 0px;
-    background-size: auto, contain;
+  .bg-image {
+    background-size: 768px;
+    background-position-x: 286px;
+    background-image: linear-gradient(87.8deg, #0e0e0e 15.61%, rgba(14, 14, 14, 0) 60.39%), url("/src/images/hero-black-tab.png");
   }
 }
 @media screen and (min-width: 1280px) {
-  .hero-api-img {
-    height: 660px;
-    max-width: 1280px;
-    background-size: auto, cover;
-    background-repeat: no-repeat;
-    background-position: 250px -60px, 225px 0px;
+  .bg-image {
+    background-size: 1280px;
+    background-position-x: 325px;
+    background-image: linear-gradient(87.8deg, #0e0e0e 15.61%, rgba(14, 14, 14, 0) 60.39%), url("/src/images//hero-black-desk.png");
   }
 }
 
@@ -1282,6 +1274,17 @@ input:checked + .switch__marker {
     max-height: 500px;
     font-size: 64px;
     line-height: 75px;
+  }
+}
+
+.light .hero__title,
+.light .hero__text {
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .light .hero__title,
+  .light .hero__text {
+    color: black;
   }
 }
 
