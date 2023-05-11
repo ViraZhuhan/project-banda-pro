@@ -52,12 +52,11 @@ export async function modalMovie(id) {
       : 'https://via.placeholder.com/395x574?text=No+Image';
 
     const backdropPath = data.backdrop_path
-      ? `https://image.tmdb.org/t/p/w500/${data.backdrop_path}`
+      ? `https://image.tmdb.org/t/p/w1280/${data.backdrop_path}`
       : 'https://via.placeholder.com/395x574?text=No+Image';
     refs.backdrop.style.backgroundImage = `url("${backdropPath}")`;
     refs.backdrop.style.backgroundSize = 'cover';
     refs.backdrop.style.backgroundRepeat = 'no-repeat';
-    refs.backdrop.style.backgroundPosition = 'center';
 
     refs.modal.innerHTML = `
     <img class="modal__img" src=${imageUrl} alt=${
