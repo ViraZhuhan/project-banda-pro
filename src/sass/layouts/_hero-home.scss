@@ -145,6 +145,41 @@
   }
 }
 
+.hero__button{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 12px 22px;
+    gap: 10px; 
+    margin-top: 20px;
+  
+    width: 140px;
+    height: 50px;
+      
+    font-family: 'Roboto';
+    font-style: normal;
+    @include font-title ($fs: 14, $ls: 0);
+      
+    background: linear-gradient(141.22deg, #FFC226 9.4%, #F84119 91.91%);
+    border-radius: 74px;
+    border: none; 
+    &:hover,
+    &:focus {
+      background: $color-text;
+      color: $color-accent;
+      border: 1px solid;
+  
+    }
+  
+    @include tablet{
+    @include font-title($fs: 14, $lh: 1.14, $ls: 0);
+    }
+    @include desktop{
+    }
+  
+  }
+
 .hero__btn {
   cursor: pointer;
   border-radius: 74px;
