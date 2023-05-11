@@ -7,7 +7,7 @@ const API_KEY = '225e339996bc91260b33199c383c8881';
 const example = `${MOVIE_URL}movie/550?api_key=${API_KEY}`;
 
 // all - movie - tv - person | week - day |
-const dayRoute = `${MOVIE_URL}trending/all/day?api_key=${API_KEY}`;
+const dayRoute = `${MOVIE_URL}trending/movie/day?api_key=${API_KEY}`;
 const weekRoute = `${MOVIE_URL}trending/all/week?api_key=${API_KEY}`;
 
 // genres

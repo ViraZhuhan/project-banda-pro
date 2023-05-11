@@ -1,4 +1,3 @@
-import { initRatings } from './init-rating';
 import getRefs from './components/get-refs';
 import { genresList } from './components/genre-list';
 import initRating from './init-rating';

@@ -1,5 +1,9 @@
 export default function getRefs() {
   return {
+  //  hero
+  heroRef: document.querySelector('.hero'),
+  heroWrapperRef: document.querySelector('.hero__wrapper'),
+   
     /* theme-toggle */
     html: document.documentElement,
     savedTheme: localStorage.getItem('color-theme'),
