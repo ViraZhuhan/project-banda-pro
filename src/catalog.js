@@ -7,3 +7,6 @@ import onSearchFormSubmit from './js/seachcatalog';
 import modalMovie from './js/modal_movie';
 import createWeekTrendsCatalog from './js/create-trends';
 import teamModal from './js/modal-team';
+
+import pagi from './js/pagi';
+import widelySearch_slave from './js/widelySearch_slave';

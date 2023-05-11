@@ -12,15 +12,15 @@ refs.searchForm.addEventListener('submit', onSearchFormSubmit);
 
 async function onSearchFormSubmit(e) {
   e.preventDefault();
-  const searchQuery = refs.searchInput.value;
+  // const searchQuery = refs.searchInput.value;
 
-  if (searchQuery === '') {
-    onFetchError()
-  }
- 
-  if (searchQuery) {
-    searchMovies(searchQuery);
-  }
+  // if (searchQuery === '') {
+  //   onFetchError();
+  // }
+
+  // if (searchQuery) {
+  //   searchMovies(searchQuery);
+  // }
 }
 
 async function searchMovies(query) {
@@ -30,12 +30,9 @@ async function searchMovies(query) {
     if (response.results === null || response.results.length === 0) {
       noSearchResults();
       clearGallery();
-
-    }
-    else if (response.results) {
+    } else if (response.results) {
       createGallery(response.results.slice(0, 10));
     }
-
   } catch (error) {
     noFilmError();
   }
@@ -43,20 +40,19 @@ async function searchMovies(query) {
 
 function noSearchResults() {
   refs.galleryCatalog.insertAdjacentHTML(
-    "beforebegin",
+    'beforebegin',
     `<p class="no-results">
   OOPS...<br />
   We are very sorry!<br />
   We don’t have any results due to your search.
   </p>`
-  )
+  );
 }
-
 
 export { onSearchFormSubmit };
 
 // Володя
-    
+
 // const axios = require('axios').default;
 
 // const API_KEY = '225e339996bc91260b33199c383c8881';
@@ -138,7 +134,6 @@ export { onSearchFormSubmit };
 //   movieList.innerHTML = markup;
 // }
 
-
 // async function handleSearchFormSubmit(e) {
 //   e.preventDefault();
 //   const query = searchInput.value;
@@ -172,7 +167,6 @@ export { onSearchFormSubmit };
 
 // renderWeekMovies();
 
-   
 // const form = document.getElementById('search-form');
 // const input = document.getElementById('search-input');
 // const movieList = document.getElementById('movie-list');
@@ -209,7 +203,6 @@ export { onSearchFormSubmit };
 //     movieList.appendChild(message);
 //   }
 // });
-
 
 // const form = document.getElementById('search-form');
 // const input = document.getElementById('search-input');
