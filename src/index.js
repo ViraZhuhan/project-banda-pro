@@ -7,3 +7,4 @@ import { fetchUpcomingMovie, renderUpcomingMovieCard } from './js/upcoming';
 import loader from './js/loader';
 import createWeekTrendsCatalog from './js/create-trends';
 
+import see from './js/pagi';
