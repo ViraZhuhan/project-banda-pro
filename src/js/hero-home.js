@@ -47,7 +47,8 @@ function renderDefaultMarkup() {
   changeHeroBackground(homePageBg);
 }
 
-function renderHeroPageMarkup({
+function renderHeroPageMarkup(
+  {
   backdrop_path,
   original_title,
   overview,
@@ -56,7 +57,8 @@ function renderHeroPageMarkup({
   const backdropPath = backdrop_path
       ? `https://image.tmdb.org/t/p/w1280/${backdrop_path}`
       : 'https://via.placeholder.com/395x574?text=No+Image';
-console.log(backdropPath)
+
+
   refs.heroWrapperRef.innerHTML = `
     <h1 class="hero__title">${original_title}</h1>
     <div class="rating hero__vote">
@@ -75,11 +77,6 @@ console.log(backdropPath)
     <p class="hero__text hero__movie-descripton">${overview}</p>
     <button class="hero__btn">Watch trailer</button>
    `;
-
-   refs.heroRef.style.backgroundImage = `url("${backdropPath}")`;
-
-  const watchMovieTrailerBtn = document.querySelector('.hero__btn');
-  watchMovieTrailerBtn.addEventListener('click', onOpenHeroModal);
 }
 
 // function changeHeroBackground(bgImg) {
