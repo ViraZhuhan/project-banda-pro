@@ -9,9 +9,9 @@ import Pagination from 'tui-pagination';
 
 const container = document.getElementById('tui-pagination-container');
 const options = {
-  totalItems: 50,
-  itemsPerPage: 20,
-  visiblePages: 15,
+  totalItems: 15,
+  itemsPerPage: 7,
+  visiblePages: 5,
   page: 1,
   centerAlign: false,
   firstItemClassName: 'tui-first-child',
@@ -105,3 +105,15 @@ async function searchMovies(query) {
 initializePagination('trends');
 
 export { updateGalleryBySearch };
+
+//============================
+
+const pagination_6 = new Pagination(container, options);
+
+myList = document.querySelectorAll('.pagi');
+// число новых
+
+pagination_6.on('beforeMove', async function (eventData) {
+  alert(eventData.page);
+  pagination_6.reset(myList);
+});
