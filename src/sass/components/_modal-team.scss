@@ -19,78 +19,60 @@
   clip-path: inset(50%);
 }
 
-.team__modal--close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 35px;
-  height: 35px;
-  text-decoration: none;
-  border: none;
-  fill: rgb(64, 60, 60);
-  background: none;
-  padding: 4px;
-  transition-property: fill black;
-  transition-duration: 250ms;
-
-  &:hover,
-  &:focus {
-    fill: #ff6b08;
-    transform: rotate(360deg);
-  }
-}
-
 .team__modal {
   position: absolute;
   top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
   overflow-y: scroll;
-  min-width: 280px;
+  min-width: 300px;
   height: 100%;
-  padding: 48px 20px 40px 20px;
-  border-radius: 4px;
-  background-color: #fff;
+  padding: 50px 20px 40px 20px;
+margin: 0 auto;
+
+  background-color: $color-bg-header;
+  box-shadow: 1px 1px 14px 4px rgba(255, 107, 8, 0.42);
+  border-radius: 20px;
 
   transition: transform 250ms ease-in-out;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     top: 50%;
-    min-width: 704px;
+    min-width: 650px;
     height: 552px;
     padding: 40px 72px 40px 36px;
   }
-  @media screen and (min-width: 1024px) {
+  @include desktop {
     top: 50%;
-    min-width: 850px;
+    min-width: 1000px;
     height: 700px;
     padding: 20px 16px;
   }
 }
 .footer-modal__title {
-  font-family: 'Roboto';
-  font-style: normal;
-  text-align: center;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 1.15;
-  color: #111;
+    font-size: 24px;
+    line-height: 1.33;
+    color: $color-text;
   text-transform: uppercase;
 
   margin: 0 0 20px 0;
 }
 
 .footer-modal__container {
-  @media screen and (min-width: 768px) {
-    gap: 50px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 15px;
   }
 }
-
 .footer-modal__box {
   border-radius: 5px;
   overflow: hidden;
@@ -98,21 +80,27 @@
   color: #fff;
   background-color: #111;
   transition: 0.5s;
+  width: 100%;
 
   &:hover,
   &:focus {
     transform: translateY(-20px);
     cursor: pointer;
   }
-}
 
-.footer-modal__box:not(:last-child) {
-  margin-bottom: 20px;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 0;
+   @include tablet {
+    width: calc((100% - 20px) / 3);
   }
 }
+
+
+// .footer-modal__box:not(:last-child) {
+//   margin-bottom: 20px;
+
+//   @media screen and (min-width: 768px) {
+//     margin-bottom: 0;
+//   }
+// }
 
 .footer-modal__box::before {
   content: '';
@@ -122,11 +110,11 @@
   width: 100%;
   height: 101px;
   background: linear-gradient(45deg, #b8b4ab, #3b3637);
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: 264px;
   }
 
-  @media screen and (min-width: 1024px) {
+  @include desktop {
     width: 375px;
   }
 }
@@ -140,11 +128,11 @@
   height: 101px;
   background: linear-gradient(45deg, #b8b4ab, #3b3637);
   filter: blur(30px);
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: 264px;
   }
 
-  @media screen and (min-width: 1024px) {
+  @include desktop {
     width: 375px;
   }
 }
@@ -157,12 +145,12 @@
 .footer-modal__img-thumb {
   height: 300px;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: 264px;
     height: 373.55px;
   }
 
-  @media screen and (min-width: 1024px) {
+  @include desktop {
     width: 375px;
     height: 478px;
   }
@@ -179,12 +167,12 @@
 .footer-modal__pic {
   height: 300px;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: 264px;
     height: 373.55px;
   }
 
-  @media screen and (min-width: 1024px) {
+  @include desktop {
     width: 375px;
     height: 478px;
   }
@@ -195,11 +183,11 @@
   height: 100px;
   position: relative;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: 264px;
   }
 
-  @media screen and (min-width: 1024px) {
+  @include desktop {
     width: 375px;
   }
 }
