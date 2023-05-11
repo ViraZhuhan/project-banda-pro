@@ -55,8 +55,6 @@ export async function renderUpcomingMovieCard(res) {
  
  const data = results[0];
  const title = data.original_title;
- const key = title;
-//  const title = res.results[0].original_title;
  const imageUrl = data.backdrop_path
  ? `https://image.tmdb.org/t/p/w500/${data.backdrop_path}`
  : 'https://via.placeholder.com/395x574?text=No+Image'; 
