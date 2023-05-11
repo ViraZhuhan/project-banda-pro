@@ -89,7 +89,7 @@ refs.galleryOfNewMovies.innerHTML = ` <h2 class="upcoming__title">Upcoming this 
 </div>
 </div>`;
 
-remindBtn = document.querySelector('.upcoming__button')
+remindBtn = document.querySelector('.upcoming__button');
 const KEY = 'LibraryMovie';
 
  const movieItem = {
@@ -113,16 +113,18 @@ function onClick() {
         : JSON.parse(localStorage.getItem(KEY)) || [];
       objects.push(movieItem);
       localStorage.setItem(KEY, JSON.stringify(objects));
-      remindBtn.disabled = true;
+      return remindBtn.disabled = true;
     } catch (error) {
       console.error(error);
     }
   }
 
-function ls() {
+function savedMovie() {
   try {
     const itemLs = localStorage.getItem(KEY);
+    console.log(itemLs);
     const parceLS = null ? undefined : JSON.parse(itemLs);
+    console.log(parceLS);
     if (parceLS === null) {
       return;
     }
@@ -136,7 +138,10 @@ function ls() {
           console.error(error);
         }
       }
-      ls();
+      savedMovie();
     });
   } catch{error => (console.log(error.message))};
   };
+
+
+ 
