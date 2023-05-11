@@ -7,13 +7,13 @@ import initRating from './init-rating';
 const refs = getRefs();
 
 
-const root = document.documentElement;
+// const root = document.documentElement;
 
-import SubstructBlackDesk from '../images/hero-black-desk.png';
-import SubstructBlackTab from '../images/hero-black-tab.png';
-import SubstructWhiteDesk from '../images/hero-white-desk.png';
-import SubstructWhiteTab from '../images/hero-white-tab.png';
-import homePageBg from '../images/hero-home-desk.jpg';
+// import SubstructBlackDesk from '../images/hero-black-desk.png';
+// import SubstructBlackTab from '../images/hero-black-tab.png';
+// import SubstructWhiteDesk from '../images/hero-white-desk.png';
+// import SubstructWhiteTab from '../images/hero-white-tab.png';
+// import homePageBg from '../images/hero-home-desk.jpg';
 
 const api = new Api();
 
