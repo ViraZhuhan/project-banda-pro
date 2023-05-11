@@ -6,3 +6,4 @@ import onSearchFormSubmit from './js/seachcatalog';
 // import weeklyTrends from './js/weekly-trends';
 import modalMovie from './js/modal_movie';
 import createWeekTrendsCatalog from './js/create-trends';
+import teamModal from './js/modal-team';
