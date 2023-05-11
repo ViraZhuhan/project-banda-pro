@@ -80,14 +80,14 @@
   }
 }
 
-// .light .hero__title,
-// .light .hero__text {
-//     color: white;
+.light .hero__title,
+.light .hero__text {
+    color: white;
 
-//   @include tablet {
-//     color: black;
-//   }
-// }
+  @include tablet {
+    color: black;
+  }
+}
 
 .hero__text {
   display: block;
@@ -243,4 +243,5 @@
   margin: 0 auto;
   text-align: center;
   z-index: 0;
+  width: 100%;
 }
