@@ -26,15 +26,15 @@ function changeStyles(bgStyles, newBg) {
   return styles.join(',');
 }
 
-function changeHeroBackground() {
-  if (!root || !hero) return;
-  const bgStyle = hero.style.backgroundImage;
-  const stylesArr = bgStyle.split(',');
-  if (window.matchMedia('(min-width: 1280px)').matches) {
-    const bgDecorator = root.classList.contains('light') ? SubstructWhiteDesk : SubstructBlackDesk;
-    hero.style.backgroundImage = changeStyles(stylesArr, bgDecorator);
-  } else if (window.matchMedia('(min-width: 768px)').matches) {
-    const bgDecorator = root.classList.contains('light') ? SubstructWhiteTab : SubstructBlackTab;
-    hero.style.backgroundImage = changeStyles(stylesArr, bgDecorator);
-  }
-}
+// function changeHeroBackground() {
+//   if (!root || !hero) return;
+//   const bgStyle = hero.style.backgroundImage;
+//   const stylesArr = bgStyle.split(',');
+//   if (window.matchMedia('(min-width: 1280px)').matches) {
+//     const bgDecorator = root.classList.contains('light') ? SubstructWhiteDesk : SubstructBlackDesk;
+//     hero.style.backgroundImage = changeStyles(stylesArr, bgDecorator);
+//   } else if (window.matchMedia('(min-width: 768px)').matches) {
+//     const bgDecorator = root.classList.contains('light') ? SubstructWhiteTab : SubstructBlackTab;
+//     hero.style.backgroundImage = changeStyles(stylesArr, bgDecorator);
+//   }
+// }
