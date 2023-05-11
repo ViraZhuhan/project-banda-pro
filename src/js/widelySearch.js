@@ -8,7 +8,7 @@ import {
 import { startSpinner, stopSpinner } from './loader';
 
 const form = document.querySelector('.filmFormWide');
-export const Api_widely_form = new Api_widely();
+// export const Api_widely_form = new Api_widely();
 
 window.addEventListener('click', hideDropdownMenu);
 form.addEventListener('submit', onSubmit);
