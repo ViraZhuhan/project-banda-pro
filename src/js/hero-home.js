@@ -72,51 +72,51 @@ function renderHeroPageMarkup({
     <button class="hero__btn">Watch trailer</button>
    `;
 
-  // changeHeroBackground(url);
+  changeHeroBackground(url);
 
   const watchMovieTrailerBtn = document.querySelector('.hero__btn');
   watchMovieTrailerBtn.addEventListener('click', onOpenHeroModal);
 }
 
-// function changeHeroBackground(bgImg) {
-//   if (window.matchMedia('(min-width: 1280px)').matches) {
-//     const bgDecorator = root.classList.contains('light')
-//       ? SubstructWhiteDesk
-//       : SubstructBlackDesk;
-//     refs.heroRef.style.backgroundImage = `url('${bgDecorator}'), url('${bgImg}')`;
-//   } else if (window.matchMedia('(min-width: 768px)').matches) {
-//     const bgDecorator = root.classList.contains('light')
-//       ? SubstructWhiteTab
-//       : SubstructBlackTab;
-//     refs.heroRef.style.backgroundImage = `url('${bgDecorator}'), url('${bgImg}')`;
-//   } else {
-//     refs.heroRef.style.backgroundImage = `linear-gradient(
-//       87.8deg,
-//       #0e0e0e 15.61%,
-//       rgba(14, 14, 14, 0) 60.39%
-//     ), url('${bgImg}')`;
-//   }
+function changeHeroBackground(bgImg) {
+  if (window.matchMedia('(min-width: 1280px)').matches) {
+    const bgDecorator = root.classList.contains('light')
+      ? SubstructWhiteDesk
+      : SubstructBlackDesk;
+    refs.heroRef.style.backgroundImage = `url('${bgDecorator}'), url('${bgImg}')`;
+  } else if (window.matchMedia('(min-width: 768px)').matches) {
+    const bgDecorator = root.classList.contains('light')
+      ? SubstructWhiteTab
+      : SubstructBlackTab;
+    refs.heroRef.style.backgroundImage = `url('${bgDecorator}'), url('${bgImg}')`;
+  } else {
+    refs.heroRef.style.backgroundImage = `linear-gradient(
+      87.8deg,
+      #0e0e0e 15.61%,
+      rgba(14, 14, 14, 0) 60.39%
+    ), url('${bgImg}')`;
+  }
 
-//   window.addEventListener('resize', onPageChangeSize);
+  window.addEventListener('resize', onPageChangeSize);
 
-//   function onPageChangeSize(e) {
-//     const currentPageWidth = e.currentTarget.innerWidth;
-//     if (currentPageWidth >= 1280) {
-//       const bgDecorator = root.classList.contains('light')
-//         ? SubstructWhiteDesk
-//         : SubstructBlackDesk;
-//       refs.heroRef.style.backgroundImage = `url('${bgDecorator}'), url('${bgImg}')`;
-//     } else if (currentPageWidth >= 768) {
-//       const bgDecorator = root.classList.contains('light')
-//         ? SubstructWhiteTab
-//         : SubstructBlackTab;
-//       refs.heroRef.style.backgroundImage = `url('${bgDecorator}'), url('${bgImg}')`;
-//     } else if (currentPageWidth < 768) {
-//       refs.heroRef.style.backgroundImage = `linear-gradient(
-//       87.8deg,
-//       #0e0e0e 15.61%,
-//       rgba(14, 14, 14, 0) 60.39%
-//     ), url('${bgImg}')`;
-//     }
-//   }
-// }
+  function onPageChangeSize(e) {
+    const currentPageWidth = e.currentTarget.innerWidth;
+    if (currentPageWidth >= 1280) {
+      const bgDecorator = root.classList.contains('light')
+        ? SubstructWhiteDesk
+        : SubstructBlackDesk;
+      refs.heroRef.style.backgroundImage = `url('${bgDecorator}'), url('${bgImg}')`;
+    } else if (currentPageWidth >= 768) {
+      const bgDecorator = root.classList.contains('light')
+        ? SubstructWhiteTab
+        : SubstructBlackTab;
+      refs.heroRef.style.backgroundImage = `url('${bgDecorator}'), url('${bgImg}')`;
+    } else if (currentPageWidth < 768) {
+      refs.heroRef.style.backgroundImage = `linear-gradient(
+      87.8deg,
+      #0e0e0e 15.61%,
+      rgba(14, 14, 14, 0) 60.39%
+    ), url('${bgImg}')`;
+    }
+  }
+}
