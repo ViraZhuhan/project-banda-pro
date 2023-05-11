@@ -6,7 +6,7 @@
     left: 0;
     z-index: 1;
     overflow-y: scroll;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
   }
   .modal-container{
     position: absolute;
@@ -16,10 +16,10 @@
   }
   .modal{
     min-width: 280px;
-    box-shadow: 1px 1px 14px 4px rgba(255, 107, 8, 0.42);
+    box-shadow: 1px 1px 14px 4px var( --color-shadow-popup);
     border-radius: 20px;
     margin: auto;
-    background-color: $color-bg-header;
+    background-color: var(--bg-primary);
     padding: 52px 16px 52px;
     @media screen and (min-width: $tablet) {
       display: grid;
@@ -42,7 +42,7 @@
     }
 
     &__items{
-      color: $color-text;
+      color: var(--color-text-primary);
         @media screen and (min-width: $tablet) {
           margin-left: 20px;
           }
@@ -62,7 +62,7 @@
     &__popularity{
       display: grid;
       grid-template: 1fr/1fr 1fr;
-      color: $color-neutral-light;
+      color: var(--color-text-info);
       font-weight: 500;
       font-size: 14px;
       padding-bottom: 12px;
@@ -75,14 +75,14 @@
         }
     }
     &__popularity span {
-      color:$color-primary-light;
+      color:var(--color-text-primary);
     }
     &__rating{
       display: grid;
       grid-template: 1fr/1fr 1fr;
 
       @include font-text;
-      color: $color-neutral-light;
+      color: var(--color-text-info);
       padding-bottom: 12px;
       @media screen and (min-width: $tablet) {
         @include font-text;
@@ -94,8 +94,8 @@
       font-weight: 500;
       font-size: 14px;
       line-height: 1.14;
-      color: $color-bg-header;
-      background-color: $color-text;
+      color: $color-primary-dark;
+      background-color: var(--bg-secondary);
       border-radius: 5px;
       @media screen and (min-width: $tablet) {
         font-weight: 500;
@@ -107,7 +107,7 @@
     &__genre{
       display: grid;
         grid-template: 1fr/1fr 1fr;
-      color: $color-neutral-light;
+      color: var(--color-text-info);
       font-weight: 500;
         font-size: 14px;
         line-height: 1.14;
@@ -120,14 +120,14 @@
     }
 
       &__genre span {
-        color: $color-primary-light;
+        color: var(--color-text-primary);
   }
     &__about{
       margin-bottom: 12px;
       font-weight: 500;
       font-size: 14px;
       line-height: 1.14;
-      color: $color-neutral-light;
+      color: var( --color-text-info);
       @media screen and (min-width: $tablet) {
               margin-bottom: 16px;
         }
@@ -139,6 +139,7 @@
       padding-bottom: 16px;
       @media screen and (min-width: $tablet) {
       padding-bottom: 24px;
+      color: var(--color-text-secondary);
     }
     }
 
@@ -149,7 +150,7 @@
     right: 16;
     width: 24px;
     height: 24px;
-    background-color: $color-bg-header;
+    background-color: var(--bg-primary);
     border: none;
     @media screen and (min-width: $tablet) {
         top: 40;
@@ -158,44 +159,44 @@
 
   }
   .button__close svg{
-    fill:#fff;
+    fill: var(--color-text-secondary);
     width: 24px;
     height: 24px;
   }
-  .button-add{
-
-    padding: 12px 24px;
-    border-radius: 74px;
-    font-size: 12px;
-    line-height: 1.33;
-    background-color: $color-bg-header;
-    color: $color-text;
-    border: 1px solid $color-text-focus;
-  }
-
-  .button-add:hover{
-    background-color: $color-text-primary;
-    border: 1px solid $color-text-focus;
-    color: $color-bg-header;;
-
-  }
+  .button-add, 
   .button-remove {
-
     padding: 12px 24px;
     border-radius: 74px;
     font-size: 12px;
     line-height: 1.33;
-    background-color: $color-bg-header;
-    color: $color-text;
-    border: 1px solid $color-text-focus;
+    background-color: var(--color-text-primary);
+    color: $color-accent;
+    border: 1px solid transparent;
+  }
+
+  .button-add:hover, 
+  .button-remove:hover {
+    color: var( --color-text-primary);
+    background: 
+    linear-gradient(var(--bg-primary) 0 0) padding-box,
+    linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%) border-box;
+  }
+
+ /*  .button-remove {
+    padding: 12px 24px;
+    border-radius: 74px;
+    font-size: 12px;
+    line-height: 1.33;
+    background-color: var(--color-text-primary);
+    color: $color-accent;
+    border: 1px solid transparent;
   }
 
   .button-remove:hover {
-    background-color: $color-text-primary;
-    border: 1px solid $color-text-focus;
-    color: $color-bg-header;
-    ;
-
-  }
+    color: var( --color-text-primary);
+    background: 
+    linear-gradient(var(--bg-primary) 0 0) padding-box,
+    linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%) border-box;
+  } */
 
 

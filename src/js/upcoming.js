@@ -90,7 +90,6 @@ refs.galleryOfNewMovies.innerHTML = ` <h2 class="upcoming__title">Upcoming this 
 </div>`;
 
 remindBtn = document.querySelector('.upcoming__button')
-remindBtn.addEventListener('click', addLS);
 const KEY = 'LibraryMovie';
 
  const movieItem = {
@@ -105,21 +104,35 @@ const KEY = 'LibraryMovie';
   overview,
 };
 
-
-function addLS() { 
-
+remindBtn.addEventListener('click', onClick=()=>{
   try {
+    console.log("hi")
     let objects = null
       ? undefined
       : JSON.parse(localStorage.getItem(KEY)) || [];
     objects.push(movieItem);
     localStorage.setItem(KEY, JSON.stringify(objects));
-    remindBtn.disabled = true;
+    btnRemind.disabled = true;
+    btnRemind.removeEventListener('click', onClick);    
   } catch (error) {
     console.error(error);
   }
-}
-function ls() {
+});
+
+// function addLS() { 
+
+//   try {
+//     let objects = null
+//       ? undefined
+//       : JSON.parse(localStorage.getItem(KEY)) || [];
+//     objects.push(movieItem);
+//     localStorage.setItem(KEY, JSON.stringify(objects));
+//     remindBtn.disabled = true;
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
+function ls(KEY) {
   try {
     const itemLs = localStorage.getItem(KEY);
     const parceLS = null ? undefined : JSON.parse(itemLs);
