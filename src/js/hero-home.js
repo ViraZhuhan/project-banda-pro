@@ -58,7 +58,7 @@ function renderHeroPageMarkup(
       ? `https://image.tmdb.org/t/p/w1280/${backdrop_path}`
       : 'https://via.placeholder.com/395x574?text=No+Image';
 
-
+      refs.heroRef.style.backgroundImage = `url("${backdropPath}")`;
   refs.heroWrapperRef.innerHTML = `
     <h1 class="hero__title">${original_title}</h1>
     <div class="rating hero__vote">

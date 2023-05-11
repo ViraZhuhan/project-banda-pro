@@ -56,9 +56,10 @@ function renderHeroPageMarkup({
         ? `https://image.tmdb.org/t/p/w1280/${poster_path}`
         : 'https://via.placeholder.com/395x574?text=No+Image';
 
+        refs.heroRef.style.backgroundImage = `url("${imageUrl}")`;
+
       return `
       <h1 class="hero__title">${title}</h1>
-      <img class="hero__movie-descripton" src="${imageUrl}" alt="${title}" width="395" >
       <div class="rating hero__vote">
         <div class="rating__body">
           <div class="rating__active" style="width: ${
