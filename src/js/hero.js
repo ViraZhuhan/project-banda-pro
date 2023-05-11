@@ -32,6 +32,7 @@ randomValue = getRandomHNumber();
   try {
     const response = await api.dayTrends();
       console.log(response.results[getRandomHNumber()]);
+      randomValue = getRandomHNumber();
       refs.heroWrapperRef.insertAdjacentHTML('beforeend', renderHeroPageMarkup(response.results[randomValue]));
 
 
