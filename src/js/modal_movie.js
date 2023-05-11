@@ -26,6 +26,9 @@ refs.backdrop.addEventListener('click', event => {
 // ========================CLICK Open=====================
 
 refs.gallery.addEventListener('click', event => {
+  if (event.target.closest('.gallery__item ') === null) {
+    return;
+  }
   toggleModal();
   let idOfCard = event.target.closest('.gallery__item ').id;
   modalMovie(idOfCard);
