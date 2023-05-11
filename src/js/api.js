@@ -79,9 +79,9 @@ export default class Api {
   //   return this.seachQuery;
   // }
 
-  // set query(newQuery) {
-  //   this.seachQuery = newQuery;
-  // }
+  set query(newQuery) {
+    this.searchQuery = newQuery;
+  }
 
   async dayTrends() {
     try {
@@ -115,7 +115,9 @@ export default class Api {
 
   async getDetailsById(id) {
     try {
-      const response = await fetch(`${URL_GET_MOVIE}/${id}?api_key=${API_KEY}&language=en-US`);
+      const response = await fetch(
+        `${URL_GET_MOVIE}/${id}?api_key=${API_KEY}&language=en-US`
+      );
       const data = await response.json();
       return data;
     } catch (error) {
