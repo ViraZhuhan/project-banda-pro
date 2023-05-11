@@ -51,6 +51,7 @@ function renderHeroPageMarkup({
 
   refs.heroWrapperRef.innerHTML = `
       <h1 class="hero__title">${original_title}</h1>
+      <img class="gallery__img" src="${imageUrl}" alt="${title}" width="395" >
       <div class="rating hero__vote">
         <div class="rating__body">
           <div class="rating__active" style="width: ${
@@ -144,3 +145,5 @@ function renderDefaultMarkup() {
 //   const watchMovieTrailerBtn = document.querySelector('.hero__btn');
 //   watchMovieTrailerBtn.addEventListener('click', onOpenHeroModal);
 // }
+
+
