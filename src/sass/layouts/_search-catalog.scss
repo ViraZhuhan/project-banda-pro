@@ -93,7 +93,9 @@
 
 .search-button {
     margin-left: 16px;
-    padding: center;
+    position: relative;
+
+    // padding: center;
 
     width: 40px;
     height: 40px;
@@ -119,6 +121,9 @@
 }
 
 .icon-search {
+    position: absolute;
+    top: 10px;
+    left: 10px;
     width: 20px;
     height: 20px;
     color: var(--color-text-primary);
