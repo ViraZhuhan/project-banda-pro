@@ -3,6 +3,7 @@ export default function getRefs() {
   //  hero
   heroRef: document.querySelector('.hero'),
   heroWrapperRef: document.querySelector('.hero__wrapper'),
+  heroButton: document.getElementById('.trailer'),
    
     /* theme-toggle */
     html: document.documentElement,

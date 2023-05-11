@@ -4,13 +4,9 @@ import getRefs from './components/get-refs';
 import { genresList } from './components/genre-list';
 import initRating from './init-rating';
 
-
-
 const refs = getRefs();
 
-
 // const root = document.documentElement;
-
 
 // import SubstructBlackDesk from '../images/hero-black-desk.png';
 // import SubstructBlackTab from '../images/hero-black-tab.png';
@@ -24,26 +20,24 @@ const api = new Api();
 
 getDayMovieTrend();
 
+let idMovies = 0;
+let divEl = '';
 
-async function getDayMovieTrend() {
-    
+
+async function getDayMovieTrend() {   
   try {
     const response = await api.dayTrends();
       const randomValue = getRandomHNumber();
-      console.log(randomValue)
+      console.log(randomValue);
       refs.heroWrapperRef.insertAdjacentHTML('beforeend', renderHeroPageMarkup(response.results[randomValue]));
-
-
   } catch (err) {
-    // refs.heroWrapperRef.insertAdjacentHTML('beforeend', renderDefaultMarkup());
+    refs.heroWrapperRef.insertAdjacentHTML('beforeend', renderDefaultMarkup());
   }
 }
-
 
 function getRandomHNumber() {
   return Math.floor(Math.random() * 10);
 }
-
 
 function renderHeroPageMarkup({
   id,
@@ -52,34 +46,37 @@ function renderHeroPageMarkup({
   overview,
   vote_average,
 }) {
+    idMovies = id;
+
     const imageUrl = poster_path
         ? `https://image.tmdb.org/t/p/w1280/${poster_path}`
         : 'https://via.placeholder.com/395x574?text=No+Image';
 
         refs.heroRef.style.backgroundImage = `url("${imageUrl}")`;
 
-      return `
-      <h1 class="hero__title">${title}</h1>
-      <div class="rating hero__vote">
-        <div class="rating__body">
-          <div class="rating__active" style="width: ${
-            vote_average * 10
-          }%;"></div>
-          <div class="rating__items hero__vote">
-            <input type="radio" class="rating__item" value="1" name="rating" />
-            <input type="radio" class="rating__item" value="2" name="rating" />
-            <input type="radio" class="rating__item" value="3" name="rating" />
-            <input type="radio" class="rating__item" value="4" name="rating" />
-            <input type="radio" class="rating__item" value="5" name="rating" />
+        divEl = `
+        <div>
+        <h1 class="hero__title">${title}</h1>
+        <div class="rating hero__vote">
+          <div class="rating__body">
+            <div class="rating__active" style="width: ${
+              vote_average * 10
+            }%;"></div>
+            <div class="rating__items hero__vote">
+              <input type="radio" class="rating__item" value="1" name="rating" />
+              <input type="radio" class="rating__item" value="2" name="rating" />
+              <input type="radio" class="rating__item" value="3" name="rating" />
+              <input type="radio" class="rating__item" value="4" name="rating" />
+              <input type="radio" class="rating__item" value="5" name="rating" />
+            </div>
           </div>
+          <div class="rating__value">${vote_average}</div>
         </div>
-        <div class="rating__value">${vote_average}</div>
-      </div>
-      <p class="hero__text hero__movie-descripton" movie-id="${id}>${overview}</p>
-      <button class="hero__btn">Watch trailer</button>
-     `;
+        <button type="button" class="hero__button" id="trailer" >Watch trailer</button>
+        <div>
+       `;       
+      return divEl;
 }
-
 
 function renderDefaultMarkup() {
   return `
@@ -90,3 +87,14 @@ function renderDefaultMarkup() {
    <a href="/src/catalog.html" class="hero__btn">Get Started</a>
    `;
 }
+
+
+async function getCurrentMovieTrailer() {
+    try {
+      const response = await api.getDetailsById(idMovies);
+      co
+      findMovieTrailer(response.results);
+    } catch (err) {
+      addBasicHeroModalMarkup();
+    }
+  }
