@@ -3,7 +3,7 @@ import Api from './api';
 import getRefs from './components/get-refs';
 import { genresList } from './components/genre-list';
 import initRating from './init-rating';
-import onOpenHeroModal from './hero-trailer'
+
 
 const refs = getRefs();
 
