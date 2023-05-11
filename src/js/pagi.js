@@ -67,13 +67,13 @@ pagination.on('beforeMove', async function (eventData) {
   }
 });
 
-// onSubmit
+//onSubmit;
 const submBtn = document.querySelector('.search-button');
 submBtn.addEventListener('click', pagiSubmit);
 let queryStr;
 
 export async function pagiSubmit(value) {
-  //   queryStr = 'sea';
+  queryStr = value;
   if (value !== '') {
     isDefaultRender = false;
     try {
