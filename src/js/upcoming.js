@@ -103,17 +103,23 @@ const KEY = 'LibraryMovie';
   genre_ids: idGenre,
   overview,
 };
-
+console.log(movieItem);
 remindBtn.addEventListener('click', onClick);
-function onClick() { 
+console.log(remindBtn);
 
+function onClick() {
     try {
-      let objects = null
+      let objects=[]; 
+   
+       objects === null
         ? undefined
         : JSON.parse(localStorage.getItem(KEY)) || [];
       objects.push(movieItem);
+      console.log(objects);
       localStorage.setItem(KEY, JSON.stringify(objects));
+      
       return remindBtn.disabled = true;
+    
     } catch (error) {
       console.error(error);
     }
@@ -131,7 +137,7 @@ function savedMovie() {
     parceLS.map(elm => {
       if (elm.id === movieItem.id) {
         console.log(elm.id);
-        return remindBtn.disabled = true; 
+        remindBtn.disabled = true;
          }
           });
         } catch (error) {
