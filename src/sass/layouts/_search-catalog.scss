@@ -6,40 +6,50 @@
     justify-content: center;
 
     padding-top: 40px;
-    padding-bottom: 28px;
+    // padding-bottom: 28px;
 
     background-color: var(--bg-primary);
 
     @include tablet {
+        padding-top: 60px;
         flex-direction: row;
         flex-wrap: nowrap;
         gap: 5px;
 
-        padding-top: 60px;
-        padding-bottom: 40px;
+        // padding-top: 80px;
+        // padding-bottom: 48px;
     }
-
     @include desktop {
-        padding-top: 60px;
-        padding-bottom: 80px;
+        padding-top: 80px;
+        // padding-top: 60px;
+        // padding-bottom: 80px;
     }
 }
 
 .search-form {
-    position: absolute;
+    // position: absolute;
     top: auto;
 
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 16px;
+    // gap: 16px;
 
     padding: 0px;
 
-    width: 264px;
-    height: 44px;
-}
+    // width: 264px;
+    // height: 44px;
+    @include tablet {
+        width: 264px;
+        height: 44px;
+      
+    }
 
+    @include desktop {
+        width: 398px;
+        height: 48px;
+}
+}
 .search-input-field {
     display: flex;
     flex-direction: row;
@@ -48,8 +58,8 @@
     // flex: none;
     flex-grow: 0;
 
-    width: 204px;
-    height: 44px;
+    width: 224px;
+    height: 40px;
 
     padding: 12px 10px 12px 20px;
 
@@ -65,14 +75,28 @@
     background-color: transparent;
     @include font-text ($fw: 500);
     color: var(--color-text-neutral);
+
+
+    @include tablet {
+        width: 204px;
+        height: 44px;
+    }  
+
+    @include desktop {
+        width: 334px;
+        height: 48px;
+        // padding-top: 60px;
+        // padding-bottom: 80px;
+    }
+
 }
 
 .search-button {
     margin-left: 16px;
     padding: center;
 
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
 
     flex: none;
     order: 1;
@@ -80,6 +104,11 @@
     background: linear-gradient(141.22deg, #FFC226 9.4%, #F84119 91.91%);
     border-radius: 50px;
     border: none;
+    @include tablet {
+        width: 40px;
+        height: 40px;
+    }  
+
 }
 
 .no-results {
