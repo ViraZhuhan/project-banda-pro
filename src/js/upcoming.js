@@ -104,35 +104,22 @@ const KEY = 'LibraryMovie';
   overview,
 };
 
-remindBtn.addEventListener('click', onClick=()=>{
-  try {
-    console.log("hi")
-    let objects = null
-      ? undefined
-      : JSON.parse(localStorage.getItem(KEY)) || [];
-    objects.push(movieItem);
-    localStorage.setItem(KEY, JSON.stringify(objects));
-    btnRemind.disabled = true;
-    btnRemind.removeEventListener('click', onClick);    
-  } catch (error) {
-    console.error(error);
+remindBtn.addEventListener('click', onClick);
+function onClick() { 
+
+    try {
+      let objects = null
+        ? undefined
+        : JSON.parse(localStorage.getItem(KEY)) || [];
+      objects.push(movieItem);
+      localStorage.setItem(KEY, JSON.stringify(objects));
+      remindBtn.disabled = true;
+    } catch (error) {
+      console.error(error);
+    }
   }
-});
 
-// function addLS() { 
-
-//   try {
-//     let objects = null
-//       ? undefined
-//       : JSON.parse(localStorage.getItem(KEY)) || [];
-//     objects.push(movieItem);
-//     localStorage.setItem(KEY, JSON.stringify(objects));
-//     remindBtn.disabled = true;
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
-function ls(KEY) {
+function ls() {
   try {
     const itemLs = localStorage.getItem(KEY);
     const parceLS = null ? undefined : JSON.parse(itemLs);
@@ -142,8 +129,7 @@ function ls(KEY) {
     parceLS.map(elm => {
       if (elm.id === movieItem.id) {
         console.log(elm.id);
-        remindBtn.disabled = true;
-
+        return remindBtn.disabled = true; 
          }
           });
         } catch (error) {
@@ -154,4 +140,3 @@ function ls(KEY) {
     });
   } catch{error => (console.log(error.message))};
   };
-
