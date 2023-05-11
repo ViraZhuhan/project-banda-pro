@@ -26,12 +26,9 @@ getDayMovieTrend();
 
 
 async function getDayMovieTrend() {
-
-randomValue = getRandomHNumber();
     
   try {
     const response = await api.dayTrends();
-      console.log(response.results[getRandomHNumber()]);
       const randomValue = getRandomHNumber();
       console.log(randomValue)
       refs.heroWrapperRef.insertAdjacentHTML('beforeend', renderHeroPageMarkup(response.results[randomValue]));
