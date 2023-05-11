@@ -37,12 +37,15 @@ $color-stars: #f84119;
   --color-text-menu: #{$color-primary-dark};
 
   // Backgrounds
+  --bg-hero: #{$color-secondary-light};
   --bg-mobile: #{$color-secondary-light};       // #171717 - #f8f8f8
   --bg-primary: #{$color-primary-light};        // #111111 - #ffffff
   --bg-secondary: #{$color-secondary-light};    // #111111 - #f8f8f8
   --bg-votes: #{$color-secondary-light};        // #f8f8f8 - #ffffff
   --bg-dropdown: #{$color-secondary-light};     // #1C1C1C - #f8f8f8
   --bg-mobile-backdrop: rgba(0, 0, 0, 0.2);
+  --bg-image-hero-tablet: url('/src/images/hero-white-tab.png');
+  --bg-image-hero-desktop: url('/src/images/hero-white-desk.png');
 
   // Text
   --color-text-primary: #{$color-primary-dark};         // #111111 - #ffffff
@@ -68,12 +71,15 @@ $color-stars: #f84119;
   --color-text-menu: #{$color-primary-light};
 
   // Backgrounds
+  --bg-hero: #0E0E0E;
   --bg-mobile: #171717;                   // #171717 - #f8f8f8
   --bg-primary: #{$color-primary-dark};     // #111111 - #ffffff
   --bg-secondary: #{$color-primary-dark};   // #111111 - #f8f8f8
   --bg-votes: #{$color-primary-light};      // #f8f8f8 - #ffffff
   --bg-dropdown: #1c1c1c;                 // #1C1C1C - #f8f8f8
   --bg-mobile-backdrop: rgba(255, 255, 255, 0.2);
+  --bg-image-hero-tablet: url('/src/images/hero-black-tab.png');
+  --bg-image-hero-desktop: url('/src/images/hero-black-desk.png');
 
   // Text
   --color-text-primary: #{$color-primary-light};        // #111111 - #ffffff

@@ -1,12 +1,12 @@
 import getRefs from './components/get-refs';
-import SubstructBlackDesk from '../images/hero-black-desk.png';
+/* import SubstructBlackDesk from '../images/hero-black-desk.png';
 import SubstructBlackTab from '../images/hero-black-tab.png';
 import SubstructWhiteDesk from '../images/hero-white-desk.png';
-import SubstructWhiteTab from '../images/hero-white-tab.png';
+import SubstructWhiteTab from '../images/hero-white-tab.png'; */
 
 const refs = getRefs();
-const hero = document.querySelector('.hero');
-const root = document.documentElement;
+/* const hero = document.querySelector('.hero');
+const root = document.documentElement; */
 
 // Switch theme by changing root element class based on checkbox input state
 export default (() => {
@@ -15,11 +15,11 @@ export default (() => {
     const theme = refs.html.className;
     refs.html.className = theme === 'dark' ? 'light' : 'dark';
     localStorage.setItem('color-theme', refs.html.className);
-    changeHeroBackground();
+    /* changeHeroBackground(); */
   });
 })();
 
-function changeStyles(bgStyles, newBg) {
+/* function changeStyles(bgStyles, newBg) {
   const styles = [...bgStyles];
   styles[0] = `url(${newBg})`;
   styles[1] &&= styles[1].replaceAll('"', '');
@@ -37,4 +37,4 @@ function changeHeroBackground() {
     const bgDecorator = root.classList.contains('light') ? SubstructWhiteTab : SubstructBlackTab;
     hero.style.backgroundImage = changeStyles(stylesArr, bgDecorator);
   }
-}
+} */
