@@ -3,6 +3,7 @@ import Api from './api';
 import getRefs from './components/get-refs';
 import { genresList } from './components/genre-list';
 import initRating from './init-rating';
+// import { onOpenHeroModal, getMovieOfDayTrendId } from './hero-trailer';
 
 const refs = getRefs();
 
@@ -16,22 +17,22 @@ const hero_poster = document.querySelector('.hero__movie-poster');
 // import SubstructWhiteTab from '../images/hero-white-tab.png';
 // import homePageBg from '../images/hero-home-desk.jpg';
 
-
 const api = new Api();
-
 
 getDayMovieTrend();
 
 let idMovies = 0;
-let divEl = '';
+// let divEl = '';
 
-
-async function getDayMovieTrend() {   
+async function getDayMovieTrend() {
   try {
     const response = await api.dayTrends();
-      const randomValue = getRandomHNumber();
-      console.log(randomValue);
-      refs.heroWrapperRef.insertAdjacentHTML('beforeend', renderHeroPageMarkup(response.results[randomValue]));
+    const randomValue = getRandomHNumber();
+    console.log(randomValue);
+    refs.heroWrapperRef.insertAdjacentHTML(
+      'beforeend',
+      renderHeroPageMarkup(response.results[randomValue])
+    );
   } catch (err) {
     refs.heroWrapperRef.insertAdjacentHTML('beforeend', renderDefaultMarkup());
   }
@@ -48,11 +49,11 @@ function renderHeroPageMarkup({
   overview,
   vote_average,
 }) {
-    idMovies = id;
+  idMovies = id;
 
-    const imageUrl = poster_path
-        ? `https://image.tmdb.org/t/p/w1280/${poster_path}`
-        : 'https://via.placeholder.com/395x574?text=No+Image';
+  const imageUrl = poster_path
+    ? `https://image.tmdb.org/t/p/w1280/${poster_path}`
+    : 'https://via.placeholder.com/395x574?text=No+Image';
 
         hero_poster.style.backgroundImage = `url("${imageUrl}")`;
         /* refs.heroRef.classList.add('bg-image'); */
@@ -78,8 +79,12 @@ function renderHeroPageMarkup({
         <p class = "hero__text">${overview.slice(0, 150) + '...'}</p>
         <button type="button" class="hero__button" id="trailer" >Watch trailer</button>
         <div>
-       `;       
-      return divEl;
+       `;
+
+  // const watchMovieTrailerBtn = document.getElementById('trailer');
+  // watchMovieTrailerBtn.addEventListener('click', onOpenHeroModal);
+
+    return divEl;
 }
 
 function renderDefaultMarkup() {
@@ -92,13 +97,12 @@ function renderDefaultMarkup() {
    `;
 }
 
-
 async function getCurrentMovieTrailer() {
-    try {
-      const response = await api.getDetailsById(idMovies);
-      co
-      findMovieTrailer(response.results);
-    } catch (err) {
-      addBasicHeroModalMarkup();
-    }
+  try {
+    const response = await api.getDetailsById(idMovies);
+  
+    findMovieTrailer(response.results);
+  } catch (err) {
+    addBasicHeroModalMarkup();
   }
+}
