@@ -3,7 +3,7 @@ import Api from './api';
 import getRefs from './components/get-refs';
 import { genresList } from './components/genre-list';
 import initRating from './init-rating';
-import { onOpenHeroModal, getMovieOfDayTrendId } from './hero-trailer';
+// import { onOpenHeroModal, getMovieOfDayTrendId } from './hero-trailer';
 
 const refs = getRefs();
 
@@ -20,7 +20,7 @@ const api = new Api();
 getDayMovieTrend();
 
 let idMovies = 0;
-let divEl = '';
+// let divEl = '';
 
 async function getDayMovieTrend() {
   try {
@@ -56,7 +56,7 @@ function renderHeroPageMarkup({
   refs.heroRef.style.backgroundImage = `url("${imageUrl}")`;
   refs.heroRef.classList.add('bg-image');
 
-  refs.heroWrapperRef.innerHTML = `
+  const divEl = `
         <div>
         <h1 class="hero__title">${title}</h1>
         <div class="rating hero__vote">
@@ -79,10 +79,10 @@ function renderHeroPageMarkup({
         <div>
        `;
 
-  const watchMovieTrailerBtn = document.getElementById('trailer');
-  watchMovieTrailerBtn.addEventListener('click', onOpenHeroModal);
+  // const watchMovieTrailerBtn = document.getElementById('trailer');
+  // watchMovieTrailerBtn.addEventListener('click', onOpenHeroModal);
 
-  //   return divEl;
+    return divEl;
 }
 
 function renderDefaultMarkup() {
@@ -98,7 +98,7 @@ function renderDefaultMarkup() {
 async function getCurrentMovieTrailer() {
   try {
     const response = await api.getDetailsById(idMovies);
-    co;
+  
     findMovieTrailer(response.results);
   } catch (err) {
     addBasicHeroModalMarkup();
