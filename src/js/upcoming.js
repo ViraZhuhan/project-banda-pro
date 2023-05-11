@@ -103,23 +103,20 @@ const KEY = 'LibraryMovie';
   genre_ids: idGenre,
   overview,
 };
-console.log(movieItem);
 remindBtn.addEventListener('click', onClick);
-console.log(remindBtn);
+
 
 function onClick() {
     try {
-      let objects=[]; 
-   
-       objects === null
-        ? undefined
-        : JSON.parse(localStorage.getItem(KEY)) || [];
-      objects.push(movieItem);
-      console.log(objects);
-      localStorage.setItem(KEY, JSON.stringify(objects));
-      
-      return remindBtn.disabled = true;
-    
+
+      let objects = null === true
+       ? undefined
+       : JSON.parse(localStorage.getItem(KEY)) || [];
+     objects.push(movieItem);
+     console.log(objects);
+     localStorage.setItem(KEY, JSON.stringify(objects));
+     
+     return remindBtn.disabled = true;
     } catch (error) {
       console.error(error);
     }
@@ -129,7 +126,7 @@ function savedMovie() {
   try {
     const itemLs = localStorage.getItem(KEY);
     console.log(itemLs);
-    const parceLS = null ? undefined : JSON.parse(itemLs);
+    let parceLS = null === true ? undefined : parceLS = JSON.parse(itemLs);
     console.log(parceLS);
     if (parceLS === null) {
       return;
@@ -140,10 +137,12 @@ function savedMovie() {
         remindBtn.disabled = true;
          }
           });
+  
         } catch (error) {
           console.error(error);
         }
       }
+       
       savedMovie();
     });
   } catch{error => (console.log(error.message))};
