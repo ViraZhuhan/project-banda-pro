@@ -393,13 +393,17 @@
   &:focus {
     background: $color-text;
     color: $color-accent;
-    border: 1px solid;
+    /* border: 1px solid; */
   }
 
   @include tablet {
     @include font-title($fs: 14, $lh: 1.14, $ls: 0);
+    width: 128px;
+    height: 40px;
   }
   @include desktop {
+    width: 139px;
+    height: 48px;
   }
 }
 
