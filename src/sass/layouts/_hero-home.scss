@@ -51,11 +51,14 @@
     background-size:contain;
     background-repeat: no-repeat;
     background-position-x: right;
+    /* background: linear-gradient(to right, #0E0E0E, transparent); */
+    background: linear-gradient(87.8deg, #0e0e0e 15.61%, #0e0e0e00 60.39%);
     @include tablet {
-      background-image: var(--bg-image-hero-tablet);
+      background: var(--bg-image-hero-tablet);
+      background-position-x: 30px;
     }
     @include desktop {
-      background-image: var(--bg-image-hero-desktop);
+      background: var(--bg-image-hero-desktop);
     }
   }
 
@@ -71,13 +74,12 @@
     @include tablet {
       width: 482px;
       background-position-y: top;
-      background-size: cover;
+      background-position-x: 30px;
     }
     @include desktop {
       width: 802px;
       background-position-y: top;
-      background-position-x: 84px;
-      background-size: cover;
+      background-position-x: center;
     }
   }
 
@@ -128,23 +130,23 @@
   width: 100%;
   height: 380px;
   // height: 100%;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     87.8deg,
     #0e0e0e 15.61%,
     rgba(14, 14, 14, 0) 60.39%
-  );
+  ); */
 
   @include tablet {
     height: 432px;
     // padding: 25px 36px;
-    background-image: var(--bg-image-hero-tablet);
-    background-position: bottom;
+    /* background-image: var(--bg-image-hero-tablet);
+    background-position: bottom; */
   }
 
   @include desktop {
     height: 660px;
     // padding: 118px 134px;
-    background-image: var(--bg-image-hero-desktop);
+    /* background-image: var(--bg-image-hero-desktop); */
   }
 
   /* &.light {
@@ -373,16 +375,16 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 12px 22px;
+  padding: 0 24px;
   gap: 10px;
   margin-top: 20px;
 
-  width: 140px;
-  height: 50px;
+  width: 117px;
+  height: 38px;
 
   font-family: 'Roboto';
   font-style: normal;
-  @include font-title($fs: 14, $ls: 0);
+  @include font-title($fs: 12, $ls: 0);
 
   background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
   border-radius: 74px;

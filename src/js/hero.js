@@ -55,7 +55,6 @@ function renderHeroPageMarkup({
         : 'https://via.placeholder.com/395x574?text=No+Image';
 
         hero_poster.style.backgroundImage = `url("${imageUrl}")`;
-        /* refs.heroRef.classList.add('bg-image'); */
 
         divEl = `
         <div class="hero__info">
