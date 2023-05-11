@@ -1,28 +1,31 @@
 .hero {
+  position: relative;
+  overflow: hidden;
   height: 380px;
   max-width: 320px;
+  // left: 50%;
 
   margin-left: auto;
   margin-right: auto;
 
-  background-position: 0px 0px, -100px 0px;
-  background-repeat: no-repeat;
-  background-size: auto, cover;
+  // background-position: 0px 0px, -100px 0px;
+  // background-repeat: no-repeat;
+  // background-size: auto, cover;
 
   @include tablet {
     height: 432px;
     max-width: 768px;
 
-    background-position: 0px 0px, 225px 0px;
-    background-size: auto, contain;
+    // background-position: 0px 0px, 225px 0px;
+    // background-size: auto, contain;
   }
   @include desktop {
     height: 660px;
     max-width: 1280px;
 
-    background-size: auto, cover;
-    background-repeat: no-repeat;
-    background-position: 0px -60px, 225px -60px;
+    // background-size: auto, cover;
+    // background-repeat: no-repeat;
+    // background-position: 0px -60px, 225px -60px;
   }
 }
 
@@ -33,7 +36,7 @@
 
   width: 250px;
   height: 100%;
-  padding-top: 40px;
+  // padding-top: 40px;
 
   @include tablet {
     width: 300px;
@@ -46,16 +49,169 @@
 }
 
 .hero__container {
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  z-index: 1;
   padding-left: 20px;
   padding-right: 20px;
-  height: 100%;
+  // height: 100%;
+
+  // position: absolute;
+  top: 0;
+  left: 0;
+  // padding: 20px 40px;
+  width: 100%;
+  height: 380px;
+  // height: 100%;
+  background-image: linear-gradient(
+    87.8deg,
+    #0e0e0e 15.61%,
+    rgba(14, 14, 14, 0) 60.39%
+  );
+
+  @include tablet {
+    height: 432px;
+    // padding: 25px 36px;
+    background-image: url('/src/images/hero-black-tab.png');
+    background-position: bottom;
+  }
 
   @include desktop {
-    padding-left: 32px;
-    padding-right: 32px;
-    width: 1280px;
+    height: 660px;
+    // padding: 118px 134px;
+    background-image: url('/src/images/hero-black-desk.png');
+  }
+
+  &.light {
+    @media screen and (min-width: 768px) {
+      background-image: url('/src/images/hero-white-tab.png');
+    }
+
+    @media screen and (min-width: 1280px) {
+      background-image: url('/src/images/hero-white-desk.png');
+    }
+  }
+
+  // @include desktop {
+  //   padding-left: 32px;
+  //   padding-right: 32px;
+  //   width: 1280px;
+  // }
+}
+
+.bg-image {
+  // position: relative;
+  // background-size: 380px;
+  background-size: auto 100%;
+
+  background-repeat: no-repeat;
+
+  background-image: linear-gradient(
+      87.8deg,
+      #0e0e0e 15.61%,
+      rgba(14, 14, 14, 0) 60.39%
+    ),
+    url('/src/images/hero-black-tel.png');
+
+  // @include retina {
+  //   background-image: linear-gradient(
+  //       87.8deg,
+  //       #0e0e0e 15.61%,
+  //       rgba(14, 14, 14, 0) 60.39%
+  //     ),
+  //     url(../images/hero_mob_2x.jpg);
+  // }
+
+  // @include mobile {
+  //   background-image: linear-gradient(
+  //       87.8deg,
+  //       #0e0e0e 15.61%,
+  //       rgba(14, 14, 14, 0) 20.39%
+  //     ),
+  //     url(../images/hero_mob.jpg);
+
+  //   @include retina {
+  //     background-image: linear-gradient(
+  //         87.8deg,
+  //         #0e0e0e 15.61%,
+  //         rgba(14, 14, 14, 0) 20.39%
+  //       ),
+  //       url(../images/hero_mob_2x.jpg);
+  //   }
+  // }
+
+  @include tablet {
+    background-size: 768px;
+    background-position-x: 286px;
+    background-image: linear-gradient(
+        87.8deg,
+        #0e0e0e 15.61%,
+        rgba(14, 14, 14, 0) 60.39%
+      ),
+      url('/src/images/hero-black-tab.png');
+
+    // @include retina {
+    //   background-image: linear-gradient(
+    //       87.8deg,
+    //       #0e0e0e 15.61%,
+    //       rgba(14, 14, 14, 0) 60.39%
+    //     ),
+    //     url('/src/images/');
+    // }
+  }
+
+  @include desktop {
+    background-size: 1280px;
+    background-position-x: 325px;
+    background-image: linear-gradient(
+        87.8deg,
+        #0e0e0e 15.61%,
+        rgba(14, 14, 14, 0) 60.39%
+      ),
+      url('/src/images//hero-black-desk.png');
+
+    // @include retina {
+    //   background-image: linear-gradient(
+    //       87.8deg,
+    //       #0e0e0e 15.61%,
+    //       rgba(14, 14, 14, 0) 60.39%
+    //     ),
+    //     url(../images/hero_2x.jpg);
+    // }
   }
 }
+
+// .bg-image {
+//   position: relative;
+
+//   background-position: 0px 0px, -100px 0px;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+//   margin: 0 auto;
+//   text-align: center;
+//   z-index: 0;
+//   width: 100%;
+//   // background-repeat: no-repeat;
+//   // background-size: auto, cover;
+
+//   @include tablet {
+//     height: 432px;
+//     width: 768px;
+
+//     background-position: 0px;
+//     background-size: auto, contain;
+//   }
+//   @include desktop {
+//     height: 660px;
+//     width: 1280px;
+
+//     background-size: auto, cover;
+//     background-repeat: no-repeat;
+//     background-position: 270px -60px, 0px 0px;
+//   }
+// }
 
 .hero__title {
   font-family: 'Roboto';
@@ -82,7 +238,7 @@
 
 .light .hero__title,
 .light .hero__text {
-    color: white;
+  color: white;
 
   @include tablet {
     color: black;
@@ -147,40 +303,38 @@
   }
 }
 
-.hero__button{ 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    padding: 12px 22px;
-    gap: 10px; 
-    margin-top: 20px;
-  
-    width: 140px;
-    height: 50px;
-      
-    font-family: 'Roboto';
-    font-style: normal;
-    @include font-title ($fs: 14, $ls: 0);
-      
-    background: linear-gradient(141.22deg, #FFC226 9.4%, #F84119 91.91%);
-    border-radius: 74px;
-    border: none; 
-    &:hover,
-    &:focus {
-      background: $color-text;
-      color: $color-accent;
-      border: 1px solid;
-  
-    }
-  
-    @include tablet{
-    @include font-title($fs: 14, $lh: 1.14, $ls: 0);
-    }
-    @include desktop{
-    }
-  
+.hero__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  padding: 12px 22px;
+  gap: 10px;
+  margin-top: 20px;
+
+  width: 140px;
+  height: 50px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  @include font-title($fs: 14, $ls: 0);
+
+  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  border-radius: 74px;
+  border: none;
+  &:hover,
+  &:focus {
+    background: $color-text;
+    color: $color-accent;
+    border: 1px solid;
   }
+
+  @include tablet {
+    @include font-title($fs: 14, $lh: 1.14, $ls: 0);
+  }
+  @include desktop {
+  }
+}
 
 .hero__btn {
   cursor: pointer;
@@ -236,12 +390,13 @@
   }
 }
 
-.bg-image { 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  margin: 0 auto;
-  text-align: center;
-  z-index: 0;
-  width: 100%;
-}
+// .bg-image {
+// background-repeat: no-repeat;
+// background-position: center;
+// background-size: cover;
+// margin: 0 auto;
+// text-align: center;
+// z-index: 0;
+// width: 100%;
+// }
+
