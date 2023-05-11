@@ -5,6 +5,7 @@ import { refs } from './modal_movie';
 
 const movieClicked = document.querySelector('.library-cards__list');
 const noFilmsMessage = document.querySelector('.alert__message');
+const libraryCards = document.querySelector('.library-cards');
 
 movieClicked.addEventListener('click', onMovieClicked);
 window.addEventListener('load', onLoadPage);
@@ -18,6 +19,7 @@ function onLoadPage() {
 
   if (data === null || data.length === 0) {
     noFilmsMessage.classList.remove('hidden');
+    libraryCards.classList.toggle('hidden');
   } else if (data) {
     createGallery(data);
   }

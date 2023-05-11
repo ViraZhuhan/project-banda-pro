@@ -4,6 +4,11 @@ html {
   box-sizing: border-box;
 }
 
+html, body {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
 * {
   box-sizing: inherit;
 }
