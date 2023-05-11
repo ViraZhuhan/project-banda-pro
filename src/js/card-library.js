@@ -26,6 +26,9 @@ function onLoadPage() {
 }
 
 function onMovieClicked(event) {
+  if (event.target.closest('.gallery__item ') === null) {
+    return;
+  }
   let idOfCard = event.target.closest('.gallery__item ').id;
   modalMovie(idOfCard);
 }
