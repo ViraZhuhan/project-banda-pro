@@ -7,13 +7,13 @@ import onOpenHeroModal from './hero-trailer'
 
 const refs = getRefs();
 
-const root = document.documentElement;
+// const root = document.documentElement;
 
-import SubstructBlackDesk from '../images/hero-black-desk.png';
-import SubstructBlackTab from '../images/hero-black-tab.png';
-import SubstructWhiteDesk from '../images/hero-white-desk.png';
-import SubstructWhiteTab from '../images/hero-white-tab.png';
-import homePageBg from '../images/hero-home-desk.jpg';
+// import SubstructBlackDesk from '../images/hero-black-desk.png';
+// import SubstructBlackTab from '../images/hero-black-tab.png';
+// import SubstructWhiteDesk from '../images/hero-white-desk.png';
+// import SubstructWhiteTab from '../images/hero-white-tab.png';
+// import homePageBg from '../images/hero-home-desk.jpg';
 
 const api = new Api();
 
@@ -72,7 +72,7 @@ function renderHeroPageMarkup({
 }
 
 function renderDefaultMarkup() {
-  changeHeroBackground(homePageBg);
+
   return `
     <h1 class="hero__title">Let’s Make Your Own Cinema</h1>
   <p class="hero__text">Is a guide to creating a personalized movie theater experience.
@@ -80,49 +80,6 @@ function renderDefaultMarkup() {
    choose your films, and stock up on snacks for the full experience.</span></p>
    <a href="/src/catalog.html" class="hero__btn">Get Started</a>
    `;
-}
-
-function changeHeroBackground(bgImg) {
-  if (window.matchMedia('(min-width: 1280px)').matches) {
-    const bgDecorator = root.classList.contains('light')
-      ? SubstructWhiteDesk
-      : SubstructBlackDesk;
-    refs.heroRef.style.backgroundImage = `url('${bgDecorator}'), url('${bgImg}')`;
-  } else if (window.matchMedia('(min-width: 768px)').matches) {
-    const bgDecorator = root.classList.contains('light')
-      ? SubstructWhiteTab
-      : SubstructBlackTab;
-    refs.heroRef.style.backgroundImage = `url('${bgDecorator}'), url('${bgImg}')`;
-  } else {
-    refs.heroRef.style.backgroundImage = `linear-gradient(
-      87.8deg,
-      #0e0e0e 15.61%,
-      rgba(14, 14, 14, 0) 60.39%
-    ), url('${bgImg}')`;
-  }
-
-  window.addEventListener('resize', onPageChangeSize);
-
-  function onPageChangeSize(e) {
-    const currentPageWidth = e.currentTarget.innerWidth;
-    if (currentPageWidth >= 1280) {
-      const bgDecorator = root.classList.contains('light')
-        ? SubstructWhiteDesk
-        : SubstructBlackDesk;
-      refs.heroRef.style.backgroundImage = `url('${bgDecorator}'), url('${bgImg}')`;
-    } else if (currentPageWidth >= 768) {
-      const bgDecorator = root.classList.contains('light')
-        ? SubstructWhiteTab
-        : SubstructBlackTab;
-      refs.heroRef.style.backgroundImage = `url('${bgDecorator}'), url('${bgImg}')`;
-    } else if (currentPageWidth < 768) {
-      refs.heroRef.style.backgroundImage = `linear-gradient(
-      87.8deg,
-      #0e0e0e 15.61%,
-      rgba(14, 14, 14, 0) 60.39%
-    ), url('${bgImg}')`;
-    }
-  }
 }
 
 
