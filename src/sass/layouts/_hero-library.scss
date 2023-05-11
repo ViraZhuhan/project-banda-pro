@@ -113,71 +113,70 @@
   }
 }
 
+.alert__message {
+  background-color: var(--bg-primary);
+  padding: 44px 0 4px;
+  width: 100%;
+  @include tablet {
+    padding: 80px 0 0;
+  }
+  @include desktop {
+    padding: 160px 0 28px;
+  }
+}
+
 .library-cards__sorry {
   @include font-text($fs: 20, $lh: 1.4);
-  // text color for night theme:
-  // color: $color-text;
-
-  // text color for white theme :
-  //  color: $color-bg-header;
-
+  color: var( --color-text-primary);
   text-align: center;
-  padding-left: 21px;
-  padding-right: 19px;
-  margin-top: 44px;
-  margin-bottom: 20px;
+  max-width: 280px;
+  padding: 0 10px;
+  margin: 0 auto 20px;
 
   @include tablet {
     @include font-text($fs: 24, $lh: 1.3);
-    margin-top: 80px;
-    margin-bottom: 24px;
-    padding-left: 165px;
-    padding-right: 165px;
-    margin-bottom: 24px;
+    max-width: none;
+    margin: 0 auto 24px;
   }
 
   @include desktop {
     @include font-text($fs: 32, $lh: 1.12);
-    margin-bottom: 28px;
-    margin-top: 160px;
+    max-width: none;
+    margin: 0 auto 28px;
   }
 }
 
 .library-cards__btn {
   @include font-text($fw: 500, $fs: 12, $lh: 1.16);
-
   padding: 12px 24px;
   border-radius: 74px;
   font-size: 12px;
   line-height: 1.33;
-  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
-  color: $color-bg-header;
-  border: 1px solid $color-text-focus;
-  border-image: linear-gradient(
-    to left,
-    141.22deg,
-    #ffc226 9.4%,
-    #f84119 91.91%
-  );
+  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%) border-box;
+  color: $color-primary-dark;
+  border: 1px solid transparent;
 
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 42px;
+
+  a {
+    @include font-text($fw: 500, $fs: 12, $lh: 1.16);
+    color: inherit;
+  }
 
   @include tablet {
     @include font-text($fs: 14, $lh: 1.14);
-    margin-bottom: 60px;
   }
 
   @include desktop {
-    margin-bottom: 108px;
     @include font-text($fs: 18, $lh: 1.5);
   }
 
   &:hover {
-    background-color: $color-text-primary;
-    border: 1px solid $color-text-focus;
-    color: $color-bg-header;
+    background: 
+    linear-gradient(var(--bg-primary) 0 0) padding-box,
+    linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%) border-box;
+    color: $color-accent;
   }
 }

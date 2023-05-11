@@ -26,11 +26,11 @@
         stroke-miterlimit="4" stroke-width="1.3333" d="M23 23l-14-14M23 9l-14 14"></path>
     </symbol>
     <symbol id="icon-search" viewBox="0 0 32 32">
-      <path fill="none" stroke="#fff" style="stroke:var(--color-text-primary)" stroke-linejoin="round" stroke-linecap="round"
+      <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"
         stroke-miterlimit="4" stroke-width="2.0800"
         d="M14.667 25.333c5.891 0 10.667-4.776 10.667-10.667s-4.776-10.667-10.667-10.667c-5.891 0-10.667 4.776-10.667 10.667s4.776 10.667 10.667 10.667z">
       </path>
-      <path fill="none" stroke="#fff" style="stroke: var(--color-text-primary)" stroke-linejoin="round" stroke-linecap="round"
+      <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round"
         stroke-miterlimit="4" stroke-width="2.0800" d="M28 28l-5.8-5.8"></path>
     </symbol>
     <symbol id="icon-scroll-up-button" viewBox="0 0 32 32">

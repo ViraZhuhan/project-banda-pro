@@ -42,6 +42,7 @@ $color-stars: #f84119;
   --bg-secondary: #{$color-secondary-light};    // #111111 - #f8f8f8
   --bg-votes: #{$color-secondary-light};        // #f8f8f8 - #ffffff
   --bg-dropdown: #{$color-secondary-light};     // #1C1C1C - #f8f8f8
+  --bg-mobile-backdrop: rgba(0, 0, 0, 0.2);
 
   // Text
   --color-text-primary: #{$color-primary-dark};         // #111111 - #ffffff
@@ -50,8 +51,8 @@ $color-stars: #f84119;
   --color-text-data: #{$color-secondary-dark};          // #282828 - #ffffff
   --color-text-neutral: #{$color-neutral-dark};         // #595959 - #b7b7b7
   --color-text-vote: #{$color-secondary-dark};
+  --color-text-button: #{$color-accent};
  
-
   // Shadows
   --color-shadow-popup: rgba(0, 0, 0, 0.22);  // rgba(0, 0, 0, 0.22) - rgba(255, 107, 8, 0.42)
 
@@ -72,6 +73,7 @@ $color-stars: #f84119;
   --bg-secondary: #{$color-primary-dark};   // #111111 - #f8f8f8
   --bg-votes: #{$color-primary-light};      // #f8f8f8 - #ffffff
   --bg-dropdown: #1c1c1c;                 // #1C1C1C - #f8f8f8
+  --bg-mobile-backdrop: rgba(255, 255, 255, 0.2);
 
   // Text
   --color-text-primary: #{$color-primary-light};        // #111111 - #ffffff
@@ -80,6 +82,7 @@ $color-stars: #f84119;
   --color-text-data: #{$color-primary-light};           // #282828 - #ffffff
   --color-text-neutral: #{$color-neutral-light};        // #595959 - #b7b7b7
   --color-text-vote: #{$color-primary-dark};
+  --color-text-button: #{$color-primary-dark};
 
   // Shadows
   --color-shadow-popup: rgba(255, 107, 8, 0.42);  // rgba(0, 0, 0, 0.22) - rgba(255, 107, 8, 0.42)

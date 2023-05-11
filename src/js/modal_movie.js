@@ -73,7 +73,6 @@ export async function modalMovie(id) {
       <p class="modal__about">ABOUT</p>
       <p class="modal__description">${data.overview}</p>
       <button class="button-add" type="button">
-        <span class="button-border"></span>
         <span class="button-add__tex">Add to my library</span>
       </button>
       <button class="button-remove hidden" type="button"><span class="button-add__tex">Remove from my library</span> </button>

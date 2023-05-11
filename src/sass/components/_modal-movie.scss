@@ -95,7 +95,7 @@
       font-size: 14px;
       line-height: 1.14;
       color: $color-primary-dark;
-      background-color: var(--bg-secondary);
+      background-color: var(--bg-votes);
       border-radius: 5px;
       @media screen and (min-width: $tablet) {
         font-weight: 500;
@@ -169,18 +169,19 @@
     border-radius: 74px;
     font-size: 12px;
     line-height: 1.33;
-    background-color: var(--color-text-primary);
-    color: $color-accent;
+    color: var( --color-text-primary);
+    background: 
+    linear-gradient(var(--bg-primary) 0 0) padding-box,
+    linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%) border-box;
     border: 1px solid transparent;
   }
 
   .button-add:hover, 
   .button-remove:hover {
-    color: var( --color-text-primary);
-    background: 
-    linear-gradient(var(--bg-primary) 0 0) padding-box,
-    linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%) border-box;
-  }
+    color: $color-accent;
+    background: var(--color-text-primary);
+    border: 1px solid transparent;
+     }
 
  /*  .button-remove {
     padding: 12px 24px;
