@@ -8,3 +8,4 @@ import './js/modal-team';
 import './js/paginations';
 import './js/hero-trailer';
 import './js/scroll-up'
+import './js/paginations-catalog';
