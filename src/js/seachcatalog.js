@@ -28,9 +28,9 @@ async function searchMovies(query) {
     const response = await searchApi.searchMovieByQuery(query);
 
     if (response.results === null || response.results.length === 0) {
-      noSearchResults();
       clearGallery();
-
+      noSearchResults();
+      document.querySelector('#tui-pagination-container').classList.add('hidden');
     }
     else if (response.results) {
       createGallery(response.results.slice(0, 10));
