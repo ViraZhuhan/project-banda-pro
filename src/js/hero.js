@@ -88,12 +88,13 @@ function renderHeroPageMarkup({
 
 function renderDefaultMarkup() {
   return `
-    <h1 class="hero__title">Let’s Make Your Own Cinema</h1>
-  <p class="hero__text">Is a guide to creating a personalized movie theater experience.
-   You'll need a projector, screen, and speakers.<span class="paragraph__hidden">Decorate your space,
-   choose your films, and stock up on snacks for the full experience.</span></p>
-   <a href="/src/catalog.html" class="hero__btn">Get Started</a>
-   `;
+    <div class="hero__info">
+      <h1 class="hero__title">Let’s Make Your Own Cinema</h1>
+      <p class="hero__text">Is a guide to creating a personalized movie theater experience.
+      You'll need a projector, screen, and speakers.<span class="paragraph__hidden">Decorate your space,
+      choose your films, and stock up on snacks for the full experience.</span></p>
+      <a href="/src/catalog.html" class="hero__btn">Get Started</a>
+    </div>`;
 }
 
 async function getCurrentMovieTrailer() {
