@@ -21,20 +21,18 @@ function noSearchResults() {
   </p>`
 
 }
-
-
-
 async function onSearch(event) {
   event.preventDefault();
   const query = event.currentTarget.elements.searchQuery.value.trim();
   const results = await api.searchMovieByQuery(query);
+  const films = results.results.slice(0, 10);
   if (query === ''){
     return message.failure(
       'Sorry, there are no images matching your search query. Please try again.',
       {
         timeout: 2000,
       }
-    );} else if(results.results.length === 0)
+    );} else if(films.length === 0)
     {    
       return noSearchResults()
     }
@@ -42,13 +40,13 @@ async function onSearch(event) {
   api.reset();
   api.nextPage();
   resetGallery();
-  markup(results.results);
+  markup(films);
 
   window.addEventListener(
     'scroll',
     throttle(event => {
       checkPosition(event);
-    }, 2000)
+    }, 4000)
   );
 }
 
@@ -61,8 +59,11 @@ function checkPosition(event) {
   const position = scrolled + screenHeight;
 
   if (position >= threshold) {
-    api.searchMovieByQuery(query).then(res => {
-      markup(res.results);
+    api
+    .searchMovieByQuery(query)
+    .then(res => {
+      const data = res.results.slice(0, 10)
+      markup(data);
       api.nextPage();
     });
   }
