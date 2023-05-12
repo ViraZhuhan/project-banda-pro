@@ -1,6 +1,6 @@
 import Api from './api';
 // import { createWeekTrends } from './createTrends.js';
-// import { createGallery } from './render-card';
+import { createGallery } from './render-card';
 import { pagination } from './pagination';
 
 const api = new Api();
