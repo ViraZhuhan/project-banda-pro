@@ -20,6 +20,7 @@
 //   </p>`;
 // }
 
+
 // async function onSearch(event) {
 //   event.preventDefault();
 //   const query = event.currentTarget.elements.searchQuery.value.trim();
@@ -64,8 +65,30 @@
 //   }
 // }
 
+}
+
+
 // const markup = e => {
 //   gallery.insertAdjacentHTML('beforeend', createGallery(e));
 // };
 
+
 // const resetGallery = () => (gallery.innerHTML = '');
+
+  if (position >= threshold) {
+    api
+    .searchMovieByQuery(query)
+    .then(res => {
+      const data = res.results.slice(0, 10)
+      markup(data);
+      api.nextPage();
+    });
+  }
+}
+
+const markup = e => {
+  gallery.insertAdjacentHTML('beforeend', createGallery(e));
+};
+
+const resetGallery = () => (gallery.innerHTML = '');
+

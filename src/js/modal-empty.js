@@ -2,10 +2,19 @@ import getRefs from './components/get-refs';
 
 const refs = getRefs();
 
-refs.modalEmptyEl.addEventListener('click', onModalEmpty);
-refs.closeModalEmptyEl.addEventListener('click', onCloseModalEmpty);
+const modal = document.querySelector('.modal-empty__backdrop');
+const close = document.querySelector('.modal-empty__close');
+modal.addEventListener('click', onModalEmpty);
+close.addEventListener('click', onCloseModalEmpty);
 
-export function onOpenModalEmpty() {
+setTimeout(async () => {
+  await new Promise(r => setTimeout(r, 1000));
+  const btn = window.document.querySelector('#trailer');
+  btn.addEventListener('click', onOpenModalEmpty);
+  console.log(), 200;
+});
+
+export default function onOpenModalEmpty() {
   toggleModalEmpty();
   window.document.addEventListener('keydown', onTapEsc);
 }
@@ -29,9 +38,9 @@ function onTapEsc(e) {
 }
 
 function toggleModalEmpty() {
-  if (refs.modalEmptyEl.classList.contains('modal-empty__backdrop--close')) {
-    refs.modalEmptyEl.classList.remove('modal-empty__backdrop--close');
+  if (modal.classList.contains('modal-empty__backdrop--close')) {
+    modal.classList.remove('modal-empty__backdrop--close');
   } else {
-    refs.modalEmptyEl.classList.add('modal-empty__backdrop--close');
+    modal.classList.add('modal-empty__backdrop--close');
   }
 }

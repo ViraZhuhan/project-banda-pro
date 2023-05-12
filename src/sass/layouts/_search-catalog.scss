@@ -110,6 +110,8 @@
 }
 
 .no-results {
+    display: block;
+    margin: 0 auto;
     color:  var(--color-text-primary);
     text-align: center;
 

@@ -1,11 +1,11 @@
-import header from './js/header';
-import mobileMenu from './js/mobile-menu';
-import themeToggle from './js/themeToggle';
+import './js/header';
+import './js/mobile-menu';
+import './js/themeToggle';
 import './js/hero';
-// import getDayMovieTrend from './js/hero';
-// import weeklyTrends from './js/weekly-trends';
-import modalMovie from './js/modal_movie';
-import { fetchUpcomingMovie, renderUpcomingMovieCard } from './js/upcoming';
-import loader from './js/loader';
-import createWeekTrendsCatalog from './js/create-trends';
-import teamModal from './js/modal-team';
+import './js/modal-empty';
+import './js/modal_movie';
+import './js/upcoming';
+import './js/loader';
+import './js/create-trends';
+import './js/modal-team';
+import './js/scroll-up'

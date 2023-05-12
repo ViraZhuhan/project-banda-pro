@@ -3,19 +3,12 @@ import Api from './api';
 import getRefs from './components/get-refs';
 import { genresList } from './components/genre-list';
 import initRating from './init-rating';
-// import { onOpenHeroModal, getMovieOfDayTrendId } from './hero-trailer';
+import onOpenModalEmpty from './modal-empty'
 
 const refs = getRefs();
 
 const hero_poster = document.querySelector('.hero__movie-poster');
 
-// const root = document.documentElement;
-
-// import SubstructBlackDesk from '../images/hero-black-desk.png';
-// import SubstructBlackTab from '../images/hero-black-tab.png';
-// import SubstructWhiteDesk from '../images/hero-white-desk.png';
-// import SubstructWhiteTab from '../images/hero-white-tab.png';
-// import homePageBg from '../images/hero-home-desk.jpg';
 
 const api = new Api();
 
@@ -28,11 +21,12 @@ async function getDayMovieTrend() {
   try {
     const response = await api.dayTrends();
     const randomValue = getRandomHNumber();
-    console.log(randomValue);
     refs.heroWrapperRef.insertAdjacentHTML(
       'beforeend',
       renderHeroPageMarkup(response.results[randomValue])
     );
+    const heroButton = document.querySelector('.hero__button');
+    heroButton.addEventListener('click', onOpenModalEmpty);
   } catch (err) {
     refs.heroWrapperRef.insertAdjacentHTML('beforeend', renderDefaultMarkup());
   }
