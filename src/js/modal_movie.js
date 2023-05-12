@@ -84,7 +84,10 @@ export async function modalMovie(id) {
     const buttonRemove = document.querySelector('.button-remove');
     const closeModalBtn = document.querySelector('.button__close');
 
-    closeModalBtn.addEventListener('click', toggleModal);
+    closeModalBtn.addEventListener('click', ()=>{
+      toggleModal();
+      location.reload()
+    });
     buttonAdd.addEventListener('click', addLS);
     buttonRemove.addEventListener('click', removeLS);
 
@@ -121,6 +124,7 @@ export async function modalMovie(id) {
         const indexMovie = objects.findIndex(obj => obj.id === id);
         objects.splice(indexMovie, 1);
         localStorage.setItem(KEY, JSON.stringify(objects));
+        location.reload()
         buttonAdd.classList.remove('hidden');
         buttonRemove.classList.add('hidden');
       } catch (error) {
