@@ -3,12 +3,11 @@ import Api from './api';
 import getRefs from './components/get-refs';
 import { genresList } from './components/genre-list';
 import initRating from './init-rating';
-import onOpenModalEmpty from './modal-empty'
+import onOpenModalEmpty from './modal-empty';
 
 const refs = getRefs();
 
 const hero_poster = document.querySelector('.hero__movie-poster');
-
 
 const api = new Api();
 
@@ -25,8 +24,12 @@ async function getDayMovieTrend() {
       'beforeend',
       renderHeroPageMarkup(response.results[randomValue])
     );
+
     const heroButton = document.querySelector('.hero__button');
     heroButton.addEventListener('click', onOpenModalEmpty);
+    await new Promise(r => setTimeout(r, 1000));
+    const btn = window.document.querySelector('#trailer');
+    btn.addEventListener('click', onOpenModalEmpty);
   } catch (err) {
     refs.heroWrapperRef.insertAdjacentHTML('beforeend', renderDefaultMarkup());
   }
@@ -49,9 +52,9 @@ function renderHeroPageMarkup({
     ? `https://image.tmdb.org/t/p/w1280/${poster_path}`
     : 'https://via.placeholder.com/395x574?text=No+Image';
 
-        hero_poster.style.backgroundImage = `url("${imageUrl}")`;
+  hero_poster.style.backgroundImage = `url("${imageUrl}")`;
 
-        return `
+  return `
         <div class="hero__info">
         <h1 class="hero__title">${title}</h1>
         <div class="rating hero__vote">
@@ -73,7 +76,6 @@ function renderHeroPageMarkup({
         <button type="button" class="hero__button" id="trailer" >Watch trailer</button>
         <div>
        `;
-
 }
 
 function renderDefaultMarkup() {
@@ -90,7 +92,7 @@ function renderDefaultMarkup() {
 async function getCurrentMovieTrailer() {
   try {
     const response = await api.getDetailsById(idMovies);
-  
+
     findMovieTrailer(response.results);
   } catch (err) {
     addBasicHeroModalMarkup();
