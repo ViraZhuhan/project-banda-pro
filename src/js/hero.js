@@ -57,7 +57,7 @@ function renderHeroPageMarkup({
 
         hero_poster.style.backgroundImage = `url("${imageUrl}")`;
 
-        divEl = `
+        return `
         <div class="hero__info">
         <h1 class="hero__title">${title}</h1>
         <div class="rating hero__vote">
@@ -80,10 +80,6 @@ function renderHeroPageMarkup({
         <div>
        `;
 
-  // const watchMovieTrailerBtn = document.getElementById('trailer');
-  // watchMovieTrailerBtn.addEventListener('click', onOpenHeroModal);
-
-    return divEl;
 }
 
 function renderDefaultMarkup() {
