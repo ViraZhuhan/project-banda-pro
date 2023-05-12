@@ -50,9 +50,9 @@
         width: 40px;
         border-radius: 50%;
         background: transparent;
-        color: $color-text-secondary;
+        color: var(--color-text-neutral);
 
-    border: 1px solid $color-text-secondary;
+    border: 1px solid var(--color-text-neutral);
     // border-width: 1px 0;
 }
 
@@ -64,7 +64,7 @@
 }
 //Текущая страница
 .tui-page-btn.tui-is-selected {
-    color: #FFFFFF;
+    color: var(--color-text-data);
     background: linear-gradient(141.22deg, #FFC226 9.4%, #F84119 91.91%);
     border: none;
     // border-color: #4b96e6;
