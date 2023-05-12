@@ -6,4 +6,5 @@ import './js/modal_movie';
 import './js/create-trends';
 import './js/modal-team';
 import './js/paginations';
+import './js/hero-trailer';
 import './js/scroll-up'
