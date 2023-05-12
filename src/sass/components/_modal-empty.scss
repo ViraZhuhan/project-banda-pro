@@ -22,8 +22,8 @@
     width: 280px;
     padding: 39px 33px 8px;
   
-    background-color: $color-bg-header;
-    box-shadow: 1px 1px 14px 4px rgba(255, 107, 8, 0.42);
+    background-color: var(--bg-primary);
+    box-shadow: var(--color-shadow-popup);
     border-radius: 20px;
   
     @media screen and (min-width: 769px) {
@@ -39,7 +39,7 @@
   
   .modal-empty__text {
     @include font-text($fw: 400, $fs: 15, $lh: 1.19, $ls: 0.02);
-    color: $color-text;
+    color: var( --color-text-primary);
     margin-bottom: 24px;
   
     @media screen and (min-width: 769px) {
@@ -73,7 +73,7 @@
     width: 16px;
     height: 16px;
     padding: 0;
-    background-color: $color-bg-header;
+    background-color:var(--bg-primary) ;
     border: none;
   
     @media screen and (min-width: 769px) {

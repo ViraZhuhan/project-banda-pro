@@ -30,7 +30,7 @@
   padding: 50px 20px 40px 20px;
   margin: 0 auto;
 
-  background-color: $color-bg-header;
+  background-color: var(--bg-primary);
   box-shadow: 1px 1px 14px 4px rgba(255, 107, 8, 0.42);
   border-radius: 20px;
 
@@ -78,7 +78,7 @@
   border-radius: 5px;
   overflow: hidden;
   position: relative;
-  color: $color-text;
+  color: var( --color-text-primary);
   background-color: $color-bg-header;
   transition: 0.5s;
   width: 100%;
