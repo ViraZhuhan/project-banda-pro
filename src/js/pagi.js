@@ -2,6 +2,7 @@ import Pagination from 'tui-pagination';
 import Api from './api';
 import { Api_widely } from './widelySearch_slave';
 import { createGallery } from './render-card';
+import { startSpinner, stopSpinner } from './loader';
 
 const container = document.getElementById('tui-pagination-container');
 const options = {
@@ -34,6 +35,7 @@ const pagination = new Pagination(container, options);
 
 // onLoadPage
 async function pagiIni() {
+  startSpinner();
   try {
     const response = await api.weekTrends();
     createGallery(response.results);
@@ -41,12 +43,14 @@ async function pagiIni() {
   } catch (error) {
     console.error('Error initializing pagination:', error);
   }
+  stopSpinner();
 }
 pagiIni();
 let isDefaultRender = true;
 
 // onBefore-week
 pagination.on('beforeMove', async function (eventData) {
+  startSpinner();
   const currentPage = eventData.page;
 
   if (isDefaultRender) {
@@ -65,6 +69,7 @@ pagination.on('beforeMove', async function (eventData) {
       console.error('Error fetching movie data:', error);
     }
   }
+  stopSpinner();
 });
 
 // onSubmit
@@ -73,6 +78,7 @@ pagination.on('beforeMove', async function (eventData) {
 let queryStr;
 
 export async function pagiSubmit(value) {
+  startSpinner();
   queryStr = value;
   if (value !== '') {
     isDefaultRender = false;
@@ -87,4 +93,5 @@ export async function pagiSubmit(value) {
       console.error('Error initializing pagination:', error);
     }
   }
+  stopSpinner();
 }
