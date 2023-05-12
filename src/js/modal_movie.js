@@ -84,10 +84,7 @@ export async function modalMovie(id) {
     const buttonRemove = document.querySelector('.button-remove');
     const closeModalBtn = document.querySelector('.button__close');
 
-    closeModalBtn.addEventListener('click', ()=>{
-      toggleModal();
-      location.reload()
-    });
+    closeModalBtn.addEventListener('click', toggleModal);
     buttonAdd.addEventListener('click', addLS);
     buttonRemove.addEventListener('click', removeLS);
 
