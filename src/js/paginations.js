@@ -12,24 +12,38 @@ const gallery = document.querySelector('.gallery');
 
 form.addEventListener('submit', onSearch);
 
+function noSearchResults() {
+  gallery.innerHTML =
+    `<p class="no-results">
+  OOPS...<br />
+  We are very sorry!<br />
+  We don’t have any results due to your search.
+  </p>`
+
+}
+
+
+
 async function onSearch(event) {
   event.preventDefault();
   const query = event.currentTarget.elements.searchQuery.value.trim();
   const results = await api.searchMovieByQuery(query);
-  if (query === '')
+  if (query === ''){
     return message.failure(
       'Sorry, there are no images matching your search query. Please try again.',
       {
         timeout: 2000,
       }
-    );
-  message.info(`Hooray! We found ${results.total_results} images.`, {
-    timeout: 2000,
-  });
+    );} else if(results.results.length === 0)
+    {    
+      return noSearchResults()
+    }
+    
   api.reset();
   api.nextPage();
   resetGallery();
   markup(results.results);
+
   window.addEventListener(
     'scroll',
     throttle(event => {
