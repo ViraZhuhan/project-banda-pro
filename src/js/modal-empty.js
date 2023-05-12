@@ -14,7 +14,7 @@ setTimeout(async () => {
   console.log(), 200;
 });
 
-export function onOpenModalEmpty() {
+export default function onOpenModalEmpty() {
   toggleModalEmpty();
   window.document.addEventListener('keydown', onTapEsc);
 }
