@@ -8,3 +8,4 @@ import modalMovie from './js/modal_movie';
 import createWeekTrendsCatalog from './js/create-trends';
 import teamModal from './js/modal-team';
 import './js/paginations';
+import './js/hero-trailer';
