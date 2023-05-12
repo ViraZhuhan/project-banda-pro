@@ -10,9 +10,12 @@
   }
   .modal-container{
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @media screen and (min-width: $tablet) {
+      top: 50%;
+    }
   }
   .modal{
     min-width: 280px;
