@@ -121,6 +121,7 @@ export async function modalMovie(id) {
         const indexMovie = objects.findIndex(obj => obj.id === id);
         objects.splice(indexMovie, 1);
         localStorage.setItem(KEY, JSON.stringify(objects));
+        location.reload()
         buttonAdd.classList.remove('hidden');
         buttonRemove.classList.add('hidden');
       } catch (error) {
