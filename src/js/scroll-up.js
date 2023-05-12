@@ -15,8 +15,12 @@ window.addEventListener('scroll', function () {
 // Add a click event listener to the button
 refs.scrollUpBtn.addEventListener('click', function () {
   // Scroll the page to the top with smooth animation
-  window.scrollTo({
+  const galleryElement = document.querySelector('.gallery-catalog').firstElementChild;
+  if (galleryElement) {
+     window.scrollTo({
     top: 0,
     behavior: 'smooth',
   });
+  }
+ 
 });
