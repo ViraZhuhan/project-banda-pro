@@ -7,12 +7,12 @@ const close = document.querySelector('.modal-empty__close');
 modal.addEventListener('click', onModalEmpty);
 close.addEventListener('click', onCloseModalEmpty);
 
-setTimeout(async () => {
-  await new Promise(r => setTimeout(r, 1000));
-  const btn = window.document.querySelector('#trailer');
-  btn.addEventListener('click', onOpenModalEmpty);
-  console.log(), 200;
-});
+// setTimeout(async () => {
+//   await new Promise(r => setTimeout(r, 1000));
+//   const btn = window.document.querySelector('#trailer');
+//   btn.addEventListener('click', onOpenModalEmpty);
+//   console.log(), 200;
+// });
 
 export default function onOpenModalEmpty() {
   toggleModalEmpty();
