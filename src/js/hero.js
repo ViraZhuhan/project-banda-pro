@@ -23,6 +23,7 @@ getDayMovieTrend();
 
 let idMovies = 0;
 // let divEl = '';
+let btn;
 
 async function getDayMovieTrend() {
   try {
@@ -33,6 +34,10 @@ async function getDayMovieTrend() {
       'beforeend',
       renderHeroPageMarkup(response.results[randomValue])
     );
+
+    await new Promise(r => setTimeout(r, 500));
+    btn = window.document.querySelector('#trailer');
+    btn.addEventListener('click', onOpenModalEmpty2);
   } catch (err) {
     refs.heroWrapperRef.insertAdjacentHTML('beforeend', renderDefaultMarkup());
   }
@@ -55,9 +60,9 @@ function renderHeroPageMarkup({
     ? `https://image.tmdb.org/t/p/w1280/${poster_path}`
     : 'https://via.placeholder.com/395x574?text=No+Image';
 
-        hero_poster.style.backgroundImage = `url("${imageUrl}")`;
+  hero_poster.style.backgroundImage = `url("${imageUrl}")`;
 
-        return `
+  return `
         <div class="hero__info">
         <h1 class="hero__title">${title}</h1>
         <div class="rating hero__vote">
@@ -79,7 +84,6 @@ function renderHeroPageMarkup({
         <button type="button" class="hero__button" id="trailer" >Watch trailer</button>
         <div>
        `;
-
 }
 
 function renderDefaultMarkup() {
@@ -96,9 +100,49 @@ function renderDefaultMarkup() {
 async function getCurrentMovieTrailer() {
   try {
     const response = await api.getDetailsById(idMovies);
-  
+
     findMovieTrailer(response.results);
   } catch (err) {
     addBasicHeroModalMarkup();
+  }
+}
+
+//===========
+const modal = document.querySelector('.modal-empty__backdrop');
+const close = document.querySelector('.modal-empty__close');
+modal.addEventListener('click', onModalEmpty);
+close.addEventListener('click', onCloseModalEmpty);
+
+//*
+function onOpenModalEmpty2() {
+  console.log('hi');
+  toggleModalEmpty();
+  window.document.addEventListener('keydown', onTapEsc);
+}
+
+function onModalEmpty(e) {
+  if (e.target === e.currentTarget) {
+    toggleModalEmpty();
+    window.document.removeEventListener('keydown', onTapEsc);
+  }
+}
+
+function onCloseModalEmpty() {
+  toggleModalEmpty();
+  window.document.removeEventListener('keydown', onTapEsc);
+}
+
+function onTapEsc(e) {
+  if (e.key === 'Escape') {
+    toggleModalEmpty();
+  }
+}
+
+//*
+function toggleModalEmpty() {
+  if (modal.classList.contains('modal-empty__backdrop--close')) {
+    modal.classList.remove('modal-empty__backdrop--close');
+  } else {
+    modal.classList.add('modal-empty__backdrop--close');
   }
 }

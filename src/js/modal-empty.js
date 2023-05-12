@@ -4,40 +4,34 @@ const refs = getRefs();
 
 const modal = document.querySelector('.modal-empty__backdrop');
 const close = document.querySelector('.modal-empty__close');
-modal.addEventListener('click', onModalEmpty);
+modal.addEventListener('click', onModalEmpty1);
 close.addEventListener('click', onCloseModalEmpty);
 
-setTimeout(async () => {
-  await new Promise(r => setTimeout(r, 1000));
-  const btn = window.document.querySelector('#trailer');
-  btn.addEventListener('click', onOpenModalEmpty);
-  console.log(), 200;
-});
-
 export function onOpenModalEmpty() {
-  toggleModalEmpty();
+  console.log('bu');
+  toggleModalEmpty1();
   window.document.addEventListener('keydown', onTapEsc);
 }
 
-function onModalEmpty(e) {
+function onModalEmpty1(e) {
   if (e.target === e.currentTarget) {
-    toggleModalEmpty();
+    toggleModalEmpty1();
     window.document.removeEventListener('keydown', onTapEsc);
   }
 }
 
 function onCloseModalEmpty() {
-  toggleModalEmpty();
+  toggleModalEmpty1();
   window.document.removeEventListener('keydown', onTapEsc);
 }
 
 function onTapEsc(e) {
   if (e.key === 'Escape') {
-    toggleModalEmpty();
+    toggleModalEmpty1();
   }
 }
 
-function toggleModalEmpty() {
+function toggleModalEmpty1() {
   if (modal.classList.contains('modal-empty__backdrop--close')) {
     modal.classList.remove('modal-empty__backdrop--close');
   } else {
